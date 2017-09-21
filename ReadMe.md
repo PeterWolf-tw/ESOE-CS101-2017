@@ -1,4 +1,5 @@
 ==Mandarin==
+
 Git 是一種「全部留下紀錄」的版本控制系統。
 請各位同學「只」編輯自己的檔案。
 檔案命名格式為：
@@ -11,6 +12,7 @@ HW01.py
 常使用 "git pull" 指令保持和全班同學同步。 
 
 ==English==
+
 Git is a version control system that logs everything.
 Please only edit files of your own.
 File naming format:
