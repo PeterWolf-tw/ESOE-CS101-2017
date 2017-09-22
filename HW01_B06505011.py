@@ -19,9 +19,8 @@ def modelPrinter(model):
     中，依照狀態機中的狀態，讀寫頭去讀當前的符號並依照運算規則決定下一步該如何，運算完之後更新狀態機的狀態，並
     持續接下來的步驟。'''
     
-    vonNewmannModelSTR = '''
-    
-    '''
+    vonNewmannModelSTR = '''一台將程式與資料放在記憶體中的機器，之前的Turing Model因為只擁有一個運算規則，因
+    此只能做一項工作，但von Newmann Model可以在記憶體中改變它的運算規則，也讓這台機器可以做更多工作。'''
     
     if model == "Alen Turing":
         print(turingModelSTR)
