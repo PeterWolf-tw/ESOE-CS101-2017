@@ -19,9 +19,9 @@ def modelPrinter(model):
      
     '''
     
-    vonNewmannModelSTR = '''Von newmann model亦是仿人類思維的邏輯計算機，不過相較於普通Turing machine，他是將程式指令記憶體與資料記憶體合併的一種運
-    算機，也就是將program 與Input/Output視為單一系統。而此模型大致可分成(1)輸入輸出，也就是下的指令及結果、(2)記憶體、(3)運算
-    系統，其中資料是以二進位編碼、(4)控制單元，則是用來控制算術邏輯。
+    vonNewmannModelSTR = '''Von newmann model亦是仿人類思維的邏輯計算機，不過相較於普通Turing machine，他是將程式指令
+    記憶體與資料記憶體合併的一種運算機，也就是將program 與Input/Output視為單一系統。而此模型大致可分成(1)輸入輸出，也就是
+    下的指令及結果、(2)記憶體、(3)運算系統，其中資料是以二進位編碼、(4)控制單元，則是用來控制算術邏輯。
     
     '''
     
