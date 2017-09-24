@@ -21,8 +21,8 @@ def modelPrinter(model):
     
     '''
     
-    vonNewmannModelSTR = '''一台將程式與資料放在記憶體中的機器，之前的Turing Model因為只擁有一個運算規則，因
-    此只能做一項工作，但von Newmann Model可以在記憶體中改變它的運算規則，也讓這台機器可以做更多工作。
+    vonNewmannModelSTR = '''von neumann model也可稱為普林斯頓結構Princeton architecture 一台將程式指令與資料放在記憶體中的機器，之前的Turing Model因為只擁有一個運算規則，因
+    此只能做一項工作，但von Newmann Model可以在記憶體中改變它的運算規則，也讓這台機器可以做更多工作，始得以實現Turing Universal Machine。
     
     '''
     
