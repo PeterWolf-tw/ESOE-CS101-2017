@@ -1,17 +1,23 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-Type "copyright", "credits" or "license()" for more information.
->>> def modelPrinter(model): '''一台為了模仿人的運算過程的假想機器，首先分成4個部分，第一個是無限長的紙帶(tape)
-    分成無限多個格子，其中每個格子上都有一個符號，第二個則是讀寫頭(head)，它能讀出當前所在格子中的符號並對此
-    當前符號做出改變，第三個是一套運算規則(table)，這規則能告訴讀寫頭該做什麼事以及接下來要做的事，最後一個則
-    是狀態儲存器，負責儲存目前的狀態，狀態儲存器只能保存有限個狀態。在運算過程中首先把符號串由左填至紙帶的格子
-    中，依照狀態機中的狀態，讀寫頭去讀當前的符號並依照運算規則決定下一步該如何，運算完之後更新狀態機的狀態，並
-    持續接下來的步驟。
+
+#Chapter 01
+
+#第 01 題
+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 Turing Model，並寫在以下第 15 行處。
+
+#第 02 題
+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 von Newmann Model，並寫在以下第 20 行處。
+
+
+def modelPrinter(model):
+    turingModelSTR = ''' Turing Model是一台假想機器，能模仿人的運算過程。它有一條無限長的紙帶、一個讀寫頭、
+    一套運算規則和一個狀態暫存器。紙帶被劃分為無限多個格子，用來紀錄符號，讀寫頭則能讀出符號，並且依據運算規則
+    改變符號，暫存器用來儲存當前的狀態。而整個機器會運算到沒有適用的指令為止。'''
     
-    '''
-    
-    vonNewmannModelSTR = '''vonnewmann model是等同於把好多個turing machine合在一起。跟turing machine一起來比較，vonnewmann model多了一條有控制規則的紙帶使得她變得多元化，原本要不同台才能做的事，現在一台就可以。
-    
-    '''
+    vonNewmannModelSTR = '''vonNewmann Model將運算規則也儲存在記憶體中，且與資料以相同的格式被儲存，透過改
+    變規則來完成各種運算，也可以視為許多個Turing machine的結合。'''
     
     if model == "Alen Turing":
         print(turingModelSTR)
@@ -24,4 +30,4 @@ Type "copyright", "credits" or "license()" for more information.
 if __name__ == "__main__":
     modelPrinter("Alen Turing")
     print("=====我是分隔線=====")
-    modelPrinter("von Newmann")
+modelPrinter("von Newmann")
