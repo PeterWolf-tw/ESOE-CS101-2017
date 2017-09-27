@@ -12,14 +12,14 @@
 
 
 def modelPrinter(model):
-    turingModelSTR = '''圖靈機為一種由Alan Turing提出的抽象模型。
-由一條無限長的紙帶、一個可左右移動的讀寫頭、一個存儲（state)狀態的暫存器盒子以及能對盒子下指令的成事所組成。
-透過製造簡單但運算能力極強的機械裝置，根據每一時刻讀寫頭所讀到的資訊和當時內部狀態進行核對，來確定它下一時刻的內部狀態和輸出動作。'''
+    turingModelSTR = ''' A Ｔuring machine is a mathematical model of computation invented by Alan Turing. It operates on an infinite memory tape that contains discrete message, or cells,also, it read/write the message through a "head".
+        After reading a message from the tape, the machine translate this message from a "table",  ouput the result based on the current state of machine. The output contains the logic how to modify the current state and the message on the tape.'''
+
 
     
-    vonNewmannModelSTR = '''現今電腦計算機的通用架構。
-將電腦分成五大原件，分別為儲存器（記憶體）、運算器、控制器以及輸出/輸入器。
-在這馮紐曼模型的概念中，只要將程式透過輸入器載入記憶體中，運算過後再透過控制器告訴電腦要用哪個輸出器執行。 '''
+    vonNewmannModelSTR = '''The major difference between Turing model and von Neumann model is that the
+        "table" used to translate message is an additional input, that is, the logic
+        of how to translate the input is "user-friendly.'''
     
     if model == "Alen Turing":
         print(turingModelSTR)
