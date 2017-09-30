@@ -26,3 +26,5 @@ HW01.py
 
 Use "git pull" command often to keep yourself updated with the class.
 
+
+課堂間示範 git 用的文字！(新增)
