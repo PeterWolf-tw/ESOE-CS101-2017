@@ -12,13 +12,17 @@
 
 
 def modelPrinter(model):
-    turingModelSTR = '''
+    A Turing machine is a mathematical model of computation invented by Alan Turing. It operates on an infinite memory tape that
+    contains discrete message, or cells, also, it read/write the message from the tape, the machine translate this message from a
+    'table', output the result based on the current state of machine. The output contains the logic how to modify the current state
+    and the message on the tape.
+   
     
-    '''
+    vonNewmannModelSTR = 
+    The major difference between Turing model and von Neumann model is thet the 'table' used to translate message is an additional
+    input, that is, the logic of hoe to translate the input is 'user-friendly'.
     
-    vonNewmannModelSTR = '''
     
-    '''
     
     if model == "Alen Turing":
         print(turingModelSTR)
