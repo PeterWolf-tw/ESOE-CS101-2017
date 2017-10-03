@@ -3,16 +3,18 @@
 
 
 def bin2int(N):
- +    n = int(input(N))
-     A = 0
-     I = 0
-     
-     while n>0:
+    n = int(input(N))
+    A = 0
+    I = 0
+
+if __name__ == "__main__" :
+
+while n >= 0:
      remainder = n % 2
      n = (n - remainder) / 10
      A += remainder * 2**I
      I = I + 1
      ans = A
      
-     if __name__ == "__main__" 
+
       print("{N} 的二進位表示為 {A}.".format(N, ans))
