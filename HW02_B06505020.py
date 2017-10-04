@@ -41,8 +41,8 @@ class HW02:
         #作業 2. 課本 Ch2. P2.19
         self.Ch2P2_19a = "10"
         self.Ch2P2_19b = "17"
-        self.Ch2P2_19c = "7"
-        self.Ch2P2_19d = "9"
+        self.Ch2P2_19c = "6"
+        self.Ch2P2_19d = "8"
 
         #作業 3. 課本 Ch2. P2.20
         self.Ch2P2_20a = "15"
