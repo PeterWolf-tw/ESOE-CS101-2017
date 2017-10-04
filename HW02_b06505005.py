@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @B06505005
- Sign out
- Watch 9
-  Star 6  Fork 8 PeterWolf-tw/ESOE-CS101-2017
- Code  Issues 0  Pull requests 1  Projects 0  Wiki Insights 
-Branch: master Find file Copy pathESOE-CS101-2017/HW02.py
-84752ff  2 days ago
-@PeterWolf-tw PeterWolf-tw 新增 Chapter02 作業。
-1 contributor
-RawBlameHistory     
-132 lines (101 sloc)  4.31 KB
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
@@ -151,15 +133,3 @@ if __name__ == '__main__': #程式進入點，程式由此行開始執行。以�
         print("Ch2P2_19a:{0}".format("Correct!"))
     else:
         print("Ch2P2_19a:{0}".format("Incorrect!"))
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
