@@ -55,11 +55,10 @@ def int2bin(N):
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
 !/usr/bin/env python3
  -*- coding:utf-8 -*-
- 
+
 def main():
-  N=1010
-  print("{0}的十進位表示為{1}.".format(N,bin(N)))
-  
+    N = 1010
+    print("{0} 的十進位表示為 {1}.".format(N, bin2int(N)))
 def bin2int(N):
     
     L = int(len(str(N)))  #將輸入的二進位數字變成字串並數出他的長度
@@ -73,9 +72,8 @@ def bin2int(N):
     
     str(A)                #將最後的答案轉換成字串形式
     return A
-    
-#if __name__ == '__main__':
-  main()
+if __name__ == '__main__':
+    main()
 
 class HW02:
     def ch2(self):
@@ -88,22 +86,22 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 2. 課本 Ch2. P2.19
-        self.Ch2P2_19a = ""
-        self.Ch2P2_19b = ""
-        self.Ch2P2_19c = ""
-        self.Ch2P2_19d = ""
+        self.Ch2P2_19a = "10"
+        self.Ch2P2_19b = "17"
+        self.Ch2P2_19c = "6"
+        self.Ch2P2_19d = "8"
 
         #作業 3. 課本 Ch2. P2.20
-        self.Ch2P2_20a = ""
-        self.Ch2P2_20b = ""
-        self.Ch2P2_20c = ""
-        self.Ch2P2_20d = ""
+        self.Ch2P2_20a = "14"
+        self.Ch2P2_20b = "8"
+        self.Ch2P2_20c = "13"
+        self.Ch2P2_20d = "4"
 
         #作業 4. 課本 Ch2. P2.22
-        self.Ch2P2_22a = ""
-        self.Ch2P2_22b = ""
-        self.Ch2P2_22c = ""
-        self.Ch2P2_22d = ""
+        self.Ch2P2_22a = "00010001 11101010 00100010 00001110"
+        self.Ch2P2_22b = "00001110 00111000 11101010 00111000"
+        self.Ch2P2_22c = "01101110 00001110 00111000 01001110"
+        self.Ch2P2_22d = "00011000 00111000 00001101 00001011"
 
 
     def ch3(self):
@@ -116,16 +114,16 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = ""
-        self.Ch3P3_28b = ""
-        self.Ch3P3_28c = ""
-        self.Ch3P3_28d = ""
+        self.Ch3P3_28a = "765"
+        self.Ch3P3_28b = "439"
+        self.Ch3P3_28c = "overflow"
+        self.Ch3P3_28d = "overflow"
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = ""
-        self.Ch3P3_30b = ""
-        self.Ch3P3_30c = ""
-        self.Ch3P3_30d = ""
+        self.Ch3P3_30a = "766"
+        self.Ch3P3_30b = "440 "
+        self.Ch3P3_30c = "overflow"
+        self.Ch3P3_30d = "overflow"
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
