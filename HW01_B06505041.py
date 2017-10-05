@@ -21,10 +21,11 @@ def modelPrinter(model):
     
     '''
     
-    vonNewmannModelSTR = '''von neumann model也可稱為普林斯頓結構Princeton architecture 一台將程式指令與資料放在記憶體中的機器，之前的Turing Model因為只擁有一個運算規則，因
-    此只能做一項工作，但von Newmann Model可以在記憶體中改變它的運算規則，也讓這台機器可以做更多工作，始得以實現Turing Universal Machine。
-    
-    '''
+    vonNewmannModelSTR = '''一台能儲存程式與資料的機器，因為運算規則與資料都要儲存在記憶體中，因此兩者的格式
+    要一樣，之前的Turing Model因為只擁有一個運算規則，因此只能做一項工作，但von Newmann Model可以在記憶體中
+    改變它的運算規則，也讓這台機器可以做更多工作。這台機器分成了五個部分(1)記憶體(2)算術邏輯單元(3)控制單元
+    (4)輸入(5)輸出，當在運算時，它會去記憶體中尋找特定資料以及特定運算規則並送往CPU(算術邏輯單元以及控制單元)
+    ，當CPU算完後再將結果儲存在記憶體中'''
     
     if model == "Alen Turing":
         print(turingModelSTR)

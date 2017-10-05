@@ -13,11 +13,18 @@
 
 def modelPrinter(model):
     turingModelSTR = '''
-    Turing Model，含有1.紙帶，紀錄所要運算的數字，2.讀寫頭，讀取現在的數字，3.狀態機(運算方法)，裡面描述了各狀態之間的關係，4.暫存狀態，紀錄現在狀態以得知接下來該如何改變，利用讀取改寫紙帶上的內容、狀態之間的改變，模擬人所做的運算。
+    A turing machine is a mathematical model of computation invented by Alan Turing. 
+    It operates on an infinite memory tape that contains discrete message, or cells,
+    also, it read/write the message through a "head". After reading a message from 
+    the tape, the machine translate this message from a "table",  ouput the result
+    based on the current state of machine. The output contains the logic how to 
+    modify the current state and the message on the tape.  
     '''
     
     vonNewmannModelSTR = '''
-    von Newmann Model，將Turing Model的運算方法轉換為一組資料，利用輸入不同運算方法，來達到做不同運算的目的。
+    The major difference between Turing model and von Neumann model is that the 
+    "table" used to translate message is an additional input, that is, the logic
+    of how to translate the input is "user-friendly".
     '''
     
     if model == "Alen Turing":

@@ -1,13 +1,23 @@
-Python 3.6.2 (v3.6.2:5fd33b5, Jul  8 2017, 04:14:34) [MSC v.1900 32 bit (Intel)] on win32
-Type "copyright", "credits" or "license()" for more information.
->>> def modelPrinter(model):
-    turingModelSTR = '''Turing model是利用機器進行計算的一個想法。Turing machine分成幾個部分¬¬–紙帶、讀寫頭、控制規則、狀態暫存器。紙帶上有一格格的空格，空格裡寫了一個符號，由讀寫頭讀出符號後，控制規則決定讀寫頭的動作，可能是修改空格裡的數字或是移到其他格來進行計算，最後則是狀態暫存器。
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+
+#Chapter 01
+
+#第 01 題
+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 Turing Model，並寫在以下第 15 行處。
+
+#第 02 題
+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 von Newmann Model，並寫在以下第 20 行處。
+
+
+def modelPrinter(model):
+    turingModelSTR = ''' Turing Model是一台假想機器，能模仿人的運算過程。它有一條無限長的紙帶、一個讀寫頭、
+    一套運算規則和一個狀態暫存器。紙帶被劃分為無限多個格子，用來紀錄符號，讀寫頭則能讀出符號，並且依據運算規則
+    改變符號，暫存器用來儲存當前的狀態。而整個機器會運算到沒有適用的指令為止。'''
     
-    '''
-    
-    vonNewmannModelSTR = '''vonnewmann model是等同於把好多個turing machine合在一起。跟turing machine一起來比較，vonnewmann model多了一條有控制規則的紙帶使得她變得多元化，原本要不同台才能做的事，現在一台就可以。
-    
-    '''
+    vonNewmannModelSTR = '''vonNewmann Model將運算規則也儲存在記憶體中，且與資料以相同的格式被儲存，透過改
+    變規則來完成各種運算，也可以視為許多個Turing machine的結合。'''
     
     if model == "Alen Turing":
         print(turingModelSTR)
@@ -20,4 +30,4 @@ Type "copyright", "credits" or "license()" for more information.
 if __name__ == "__main__":
     modelPrinter("Alen Turing")
     print("=====我是分隔線=====")
-    modelPrinter("von Newmann")
+modelPrinter("von Newmann")

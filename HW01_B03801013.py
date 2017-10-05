@@ -12,12 +12,14 @@
 
 
 def modelPrinter(model):
-    turingModelSTR = '''
-    Turing Model，含有1.紙帶，紀錄所要運算的數字，2.讀寫頭，讀取現在的數字，3.狀態機(運算方法)，裡面描述了各狀態之間的關係，4.暫存狀態，紀錄現在狀態以得知接下來該如何改變，利用讀取改寫紙帶上的內容、狀態之間的改變，模擬人所做的運算。
+    turingModelSTR = '''由紙帶、讀寫頭、控制規則、狀態暫存器幾個部分所組成的機器，其中紙帶記錄資訊，由讀寫頭讀取當下狀態，並根據控制規則改變當下狀態，
+    並用狀態暫存器純存當下狀態，以此模擬人類來運算。
+    
     '''
     
-    vonNewmannModelSTR = '''
-    von Newmann Model，將Turing Model的運算方法轉換為一組資料，利用輸入不同運算方法，來達到做不同運算的目的。
+    vonNewmannModelSTR = '''將電腦分成memory、arithmetic logic unit、control unit、input/output四個部分，再將電腦的program和data都寫入memory，
+    因此program在vonneumannModel下就可以被更改，是一種universal turing machine。
+    
     '''
     
     if model == "Alen Turing":
