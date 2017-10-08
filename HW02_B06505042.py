@@ -53,7 +53,11 @@ def int2bin(N):
 
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
-def bin2int(N):
+def main():
+    number =101110
+    print("二進位數字{0}的十進位表示法為：{1}".format(number,bin2int(number)))
+
+def bin2int(N): 
 
     L = int(len(str(N))) 
     A = 0                 
@@ -68,7 +72,9 @@ def bin2int(N):
     return A
 
     if __name__ == '__main__':
+        
         main()
+        
 class HW02:
     def ch2(self):
         '''
