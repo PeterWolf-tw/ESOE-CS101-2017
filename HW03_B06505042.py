@@ -2,132 +2,142 @@
 # -*- coding:utf-8 -*-
 
 
-#<教學>
-# 以 "#" 字符號開頭的內容將被 Python 視為「註解」。不會執行。
+# 繳交日期：2016.10.17
 
-# #########################################說明########################################
-# 對 Python 而言， if __name__ == "__main__" 即為程式的進入點。一個程式只能有「一個」進入點。
-# 換言之，整支程式從這一行開始執行。
+# 作業內容：
+# 1. 請閱讀 Wikipedia 維基百科 IEEE754 條目 (https://zh.wikipedia.org/wiki/IEEE_754)
 
-#def sayHi():
-    #'''
-    #這裡定義了一個函式，名叫 sayHi
-    #'''
-    # #這支函式唯一的功能就是印出下面這一句話…
-    #print("Hi！這是一支只會說 Hi 的函式。")
+# 2. 請試玩 http://armorgames.com/play/17826/logical-element
 
-
-
-#if __name__ == '__main__': #這裡是程式進入點。整支程式從這裡開始執行…
-    # #以下執行 sayHi() 函式
-    #sayHi()
-
-#</教學>
-# #####################################################################################
-
-
-number = 100  #設定 number 這個變數的值為 2
-print("number 的二進位表示法為：{0}".format(bin(number))) #將 2 餵入 bin(n) 函式中，並把 bin(n) 回傳的結果，接著餵給 print() 輸出在螢幕畫面上。
-
-# 你可以試著把 number 的值改為其它的數字，觀察看看。
-
-# bin(n) 的原理大致如下：
-
-def int2bin(N):
-    '''
-    本函式將 int 整數轉為 bin 二進位制表示。作用等同於 bin(N)
-    '''
-    tmpLIST = []
-    while N > 0:
-        remainder = int(N % 2)
-        tmpLIST.append(remainder)
-        N = (N - remainder) / 2
-    tmpLIST.append(0)
-
-    ans = ""
-    for j in tmpLIST[::-1]: #將 tmpLIST 中的數字從尾至頭傳入 j
-        ans = ans + str(j)
-    print("{0} 的二進位表示為 {1}.".format(N, ans))
-    return None
+# 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
+#    並由高排到低。
+def charFreqLister(inputSTR):
+    resultLIST = []
+    freq = {}
+    
+    for x in inputSTR:
+        freq[x] = inputSTR.count(x) 
+        freq[x]=  freq[x]/len(inputSTR)   
+    for y in freq:
+        resultLIST.append((freq[y], y))
+    
+    resultLIST.sort(key=lambda input:input[0], reverse=True)
+    return resultLIST
 
 
-#作業 1.
-# 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
-def bin2int(N):
 
-    L = int(len(str(N))) 
-    A = 0                 
-    K = 0
-    while L > K :         
-        r = int(N%10)    
-        A = A + (2**K)*r  
-        N = N/10          
-        K = K + 1         
+
+# 3.1 加分題 (有做有加分，沒做不扣分)：請用課堂中提到的「霍夫曼編碼]
+#     (https://zh.wikipedia.org/wiki/霍夫曼編碼) 為你之前設計的
+#     程式加上轉碼壓縮的功能。
+# e.g.,
+#def huffmanTranslater(inputSTR):
+#resultLIST = [(freq, char, code), (freq, char, code), (freq, char, code),...]
+
+#return resultLIST
+
+# 4 請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
+
+#condition00 not condition01
+def condNOT(inputSTR_X):
+    outputSTR = ""
+    for i in inputSTR_X:
+        if i == "0":
+            outputSTR = outputSTR + "1"
+        else:
+            outputSTR = outputSTR + "0"
+    return outputSTR
+
+
+#condition00 and condition02
+def condAND(inputSTR_X, inputSTR_Y):
+    output= ""    
+    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+        if x=="1" and y =="1":
+            output = output + "1"
+        else: 
+            output = output + "0"
         
-    str(A)                
-    return A
+    
+    return output
 
-    if __name__ == '__main__':
-        main()
-class HW02:
-    def ch2(self):
-        '''
-        請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
+#condition00 or condition03
+def condOR(inputSTR_X, inputSTR_Y):
+    output = ""
+    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+        if x=="0" and y=="0":
+            output = output + "0"
+        else:
+            output = output + "1"
+        
+    
+    
+    
+    return output
 
-        Ch2P2_19a = "xxx"
-
-        意思是
-        Ch2   : 第二章
-        P2_19a: 第二章結尾處的 PRACTICE SET 段落處的 Problems 第 P2-19 題的 a 小題
-        "xxx" ： 你要填入你的答案在 xxx 這裡。
-        '''
-        #作業 2. 課本 Ch2. P2.19
-        self.Ch2P2_19a = "10"
-        self.Ch2P2_19b = "17"
-        self.Ch2P2_19c = "6"
-        self.Ch2P2_19d = "8"
-
-        #作業 3. 課本 Ch2. P2.20
-        self.Ch2P2_20a = "15"
-        self.Ch2P2_20b = "9"
-        self.Ch2P2_20c = "14"
-        self.Ch2P2_20d = "5"
-
-        #作業 4. 課本 Ch2. P2.22
-        self.Ch2P2_22a = "00010001 11101010 00100010 00001110"
-        self.Ch2P2_22b = "00001110 00111000 11101010 00111000"
-        self.Ch2P2_22c = "01101110 00001110 00111000 01001110"
-        self.Ch2P2_22d = "00011000 00111000 00001101 00001011"
+#condition00 xor condition04
+def conXOR(inputSTR_X, inputSTR_Y):
+    output = ""
+    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+        if x == "0" and y =="0":
+            output = output + "0"
+        elif x == "1" and y == "1":
+            output = output + "0"
+        else: 
+            output = output + "1"
+            
+    return output
 
 
-    def ch3(self):
-        '''
-        請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
 
-        Ch3P3_28a = "xxx"
+if __name__== "__main__":
+    condition00X = ""
+    condition00Y = ""
 
-        意思是
-        Ch3   : 第三章
-        P3_28a: 第三章結尾處的 PRACTICE SET 段落處的 Problems 第 P3-28 題的 a 小題
-        "xxx" ： 你要填入你的答案在 xxx 這裡。
-        '''
-        #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = "234"
-        self.Ch3P3_28b = "560"
-        self.Ch3P3_28c = "874"
-        self.Ch3P3_28d = "888"
+    condition01 = condNOT(condition00X)
+    print(condition01)
 
-        #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = "234"
-        self.Ch3P3_30b = "560"
-        self.Ch3P3_30c = "875"
-        self.Ch3P3_30d = "889"
-
-
-if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
-    checkHW02 = HW02()
-    checkHW02.ch2()
-    if checkHW02.Ch2P2_19a == "10": #10 是這題的正解。此行檢查這題的答案。
-        print("Ch2P2_19a:{0}".format("Correct!"))
-    else:
-        print("Ch2P2_19a:{0}".format("Incorrect!"))
+    # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
+    # Ch3 表示為第三章
+    # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
+    
+    print("Ans:")
+    Ch3P3_20a = ""
+    Ch3P3_20b = ""
+    Ch3P3_20c = ""
+    Ch3P3_20d = ""
+    print("========")
+    Ch3P3_28a = ""
+    Ch3P3_28b = ""
+    Ch3P3_28c = ""
+    Ch3P3_28d = ""
+    print("========")
+    Ch3P3_30a = ""
+    Ch3P3_30b = ""
+    Ch3P3_30c = ""
+    Ch3P3_30d = ""
+    print("========")
+    Ch4P4_3a = ""
+    Ch4P4_3b = ""
+    Ch4P4_3c = ""
+    Ch4P4_3d = ""
+    print("========")
+    Ch4P4_4a = ""
+    Ch4P4_4b = ""
+    Ch4P4_4c = ""
+    Ch4P4_4d = ""
+    print("========")
+    Ch4P4_13a = ""
+    Ch4P4_13b = ""
+    Ch4P4_13c = ""
+    Ch4P4_13d = ""
+    print("========")
+    Ch4P4_15a = ""
+    Ch4P4_15b = ""
+    Ch4P4_15c = ""
+    Ch4P4_15d = ""
+    print("========")
+    Ch4P4_16a = ""
+    Ch4P4_16b = ""
+    Ch4P4_16c = ""
+    Ch4P4_16d = ""
