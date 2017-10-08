@@ -35,7 +35,18 @@ def charFreqLister(inputSTR):
 #resultLIST = [(freq, char, code), (freq, char, code), (freq, char, code),...]
 
 #return resultLIST
-def huffmanTranslater(L):
+def huffmanTranslater(inputSTR):
+    resultLIST = []
+    freq = {}
+    
+    for x in inputSTR:
+        freq[x] = inputSTR.count(x) 
+        freq[x]=  freq[x]/len(inputSTR)   
+    for y in freq:
+        resultLIST.append([freq[y], y])
+    
+    resultLIST.sort(key=lambda input:input[0], reverse=True)
+    L=resultLIST
     L1=L
     def FIND(w):
         
@@ -101,8 +112,7 @@ def huffmanTranslater(L):
 
 if __name__ == '__main__':
     inputSTR=input('輸入一字串')
-    L=charFreqLister(inputSTR)
-    L1=huffmanTranslater(L)
+    L1=huffmanTranslater(inputSTR)
     print(L1)
 
 
