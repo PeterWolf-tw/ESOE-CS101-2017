@@ -39,63 +39,61 @@ def charFreqLister(inputSTR):
 # 4 請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
 
 #condition00 not condition01
-def condNOT(inputSTR_X):
-    outputSTR = ""
-    for i in inputSTR_X:
+def fNOT(inX):
+    out = ""
+    for i in inX:
         if i == "0":
-            outputSTR = outputSTR + "1"
+            out = out + "1"
         else:
-            outputSTR = outputSTR + "0"
-    return outputSTR
-
+            out = out + "0"
+    return out
 
 #condition00 and condition02
-def condAND(inputSTR_X, inputSTR_Y):
-    output= ""    
-    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+def fAND(inX, inY):
+    out= ""    
+    for (x,y) in zip(inX,inY):
         if x=="1" and y =="1":
-            output = output + "1"
+            out = out + "1"
         else: 
-            output = output + "0"
-        
-    
-    return output
+            out = out + "0"
+    return out
 
 #condition00 or condition03
-def condOR(inputSTR_X, inputSTR_Y):
-    output = ""
-    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+def fOR(inX, inY):
+    out = ""
+    for (x,y) in zip(inX,inY):
         if x=="0" and y=="0":
-            output = output + "0"
+            out = out + "0"
         else:
-            output = output + "1"
-        
-    
-    
-    
-    return output
+            out = out + "1"
+    return out
 
 #condition00 xor condition04
-def conXOR(inputSTR_X, inputSTR_Y):
-    output = ""
-    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+def fXOR(inX, inY):
+    out = ""
+    for (x,y) in zip(inX,inY):
         if x == "0" and y =="0":
-            output = output + "0"
+            out = out + "0"
         elif x == "1" and y == "1":
-            output = output + "0"
+            out = out + "0"
         else: 
-            output = output + "1"
-            
-    return output
-
+            out = out + "1"
+    return out
 
 
 if __name__== "__main__":
-    condition00X = ""
-    condition00Y = ""
+    condition00X = "01101101"
+    condition00Y = "10100111"
 
-    condition01 = condNOT(condition00X)
+    condition01 = fNOT(condition00X)
+    condition02 = fAND(condition00X,condition00Y)
+    condition03 = fOR(condition00X,condition00Y)
+    condition04 = fXOR(condition00X,condition00Y)
     print(condition01)
+    print(condition02)
+    print(condition03)
+    print(condition04)
+
 
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
