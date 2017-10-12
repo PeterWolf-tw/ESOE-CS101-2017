@@ -11,19 +11,21 @@
 
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
-def charFreqLister(inputSTR):
-    resultLIST = []
+def frequent(inputSTR):
+    result = []
     freq = {}
     
     for x in inputSTR:
         freq[x] = inputSTR.count(x) 
         freq[x]=  freq[x]/len(inputSTR)   
     for y in freq:
-        resultLIST.append((freq[y], y))
+        result.append((freq[y], y))
     
-    resultLIST.sort(key=lambda input:input[0], reverse=True)
-    return resultLIST
+    result.sort(key=lambda input:input[0], reverse=True)
+    return result
 
+word=str(input())
+print(frequent(word))
 
 
 
@@ -100,10 +102,10 @@ if __name__== "__main__":
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = ""
-    Ch3P3_20b = ""
-    Ch3P3_20c = ""
-    Ch3P3_20d = ""
+    Ch3P3_20a = "01000000111001100000000000000000"
+    Ch3P3_20b = "01000001001101101000000000000000"
+    Ch3P3_20c = "11000001010010100100000000000000"
+    Ch3P3_20d = "10111110110000000000000000000000"
     print("========")
     Ch3P3_28a = ""
     Ch3P3_28b = ""
