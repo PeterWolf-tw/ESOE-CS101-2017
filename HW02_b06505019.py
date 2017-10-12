@@ -2,40 +2,40 @@
 # -*- coding:utf-8 -*-
 
 
-#<�о�>
-# �H "#" �r�Ÿ��}�Y�����e�N�Q Python �����u���ѡv�C���|����C
+#<教學>
+# 以 "#" 字符號開頭的內容將被 Python 視為「註解」。不會執行。
 
-# #########################################����########################################
-# �� Python �Ө��A if __name__ == "__main__" �Y���{�����i�J�I�C�@�ӵ{���u�঳�u�@�ӡv�i�J�I�C
-# �������A���{���q�o�@��}�l����C
+# #########################################說明########################################
+# 對 Python 而言， if __name__ == "__main__" 即為程式的進入點。一個程式只能有「一個」進入點。
+# 換言之，整支程式從這一行開始執行。
 
 #def sayHi():
     #'''
-    #�o�̩w�q�F�@�Ө禡�A�W�s sayHi
+    #這裡定義了一個函式，名叫 sayHi
     #'''
-    # #�o��禡�ߤ@���\��N�O�L�X�U���o�@�y�ܡK
-    #print("Hi�I�o�O�@��u�|�� Hi ���禡�C")
+    # #這支函式唯一的功能就是印出下面這一句話…
+    #print("Hi！這是一支只會說 Hi 的函式。")
 
 
 
-#if __name__ == '__main__': #�o�̬O�{���i�J�I�C���{���q�o�̶}�l����K
-    # #�H�U���� sayHi() �禡
+#if __name__ == '__main__': #這裡是程式進入點。整支程式從這裡開始執行…
+    # #以下執行 sayHi() 函式
     #sayHi()
 
-#</�о�>
+#</教學>
 # #####################################################################################
 
 
-number = 100  #�]�w number �o���ܼƪ��Ȭ� 2
-print("number ���G�i���ܪk���G{0}".format(bin(number))) #�N 2 ���J bin(n) �禡���A�ç� bin(n) �^�Ǫ����G�A�������� print() ��X�b�ù��e���W�C
+number = 100  #設定 number 這個變數的值為 2
+print("number 的二進位表示法為：{0}".format(bin(number))) #將 2 餵入 bin(n) 函式中，並把 bin(n) 回傳的結果，接著餵給 print() 輸出在螢幕畫面上。
 
-# �A�i�H�յۧ� number ���ȧאּ�䥦���Ʀr�A�[��ݬݡC
+# 你可以試著把 number 的值改為其它的數字，觀察看看。
 
-# bin(n) ����z�j�P�p�U�G
+# bin(n) 的原理大致如下：
 
 def int2bin(N):
     '''
-    ���禡�N int ����ର bin �G�i����ܡC�@�ε��P�� bin(N)
+    本函式將 int 整數轉為 bin 二進位制表示。作用等同於 bin(N)
     '''
     tmpLIST = []
     while N > 0:
@@ -45,51 +45,51 @@ def int2bin(N):
     tmpLIST.append(0)
 
     ans = ""
-    for j in tmpLIST[::-1]: #�N tmpLIST �����Ʀr�q�����Y�ǤJ j
+    for j in tmpLIST[::-1]: #將 tmpLIST 中的數字從尾至頭傳入 j
         ans = ans + str(j)
-    print("{0} ���G�i���ܬ� {1}.".format(N, ans))
+    print("{0} 的二進位表示為 {1}.".format(N, ans))
     return None
 
 
-#�@�~ 1.
-# �аѦҤW�ҡA�ۤv�g�@�ӱN�G�i���ܼ��ର�Q�i���禡�ѵy�᪺�@�~�ϥΡG
+#作業 1.
+# 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
 def bin2int(N):
     
-    L = int(len(str(N)))  #�N��J���G�i��Ʀr�ܦ��r��üƥX�L������
-    A = 0                 #�]�w����ܼơA�䤤A�O�Ψӭp��̫᪺���סAK�O�Ψӭp��j��B�檺���ƥH�Χ@��2������
+    L = int(len(str(N)))  #將輸入的二進位數字變成字串並數出他的長度
+    A = 0                 #設定兩個變數，其中A是用來計算最後的答案，K是用來計算迴圈運行的次數以及作為2的指數
     K = 0
-    while L > K :         #�]�w�j�����A����檺���Ƶ����J���G�i��Ʀr���׫�A�K���A����j��
-        r = int(N%10)     #�]�w�@���ܼ�r,�Ϩ䦨����e�G�i��Ƴ̥k�䪺�ƪ���
-        A = A + (2**K)*r  #�p���e�ұo�쪺�ƪ��`�M
-        N = N/10          #�N��e�G�i��Ƴ̥k�䪺�ƭȥh��
-        K = K + 1         #���榸�ƥ[1
+    while L > K :         #設定迴圈條件，當執行的次數等於輸入的二進位數字長度後，便不再執行迴圈
+        r = int(N%10)     #設定一個變數r,使其成為當前二進位數最右邊的數的值
+        A = A + (2**K)*r  #計算當前所得到的數的總和
+        N = N/10          #將當前二進位數最右邊的數值去掉
+        K = K + 1         #執行次數加1
     
-    str(A)                #�N�̫᪺�����ഫ���r��Φ�
+    str(A)                #將最後的答案轉換成字串形式
     return A
 
 class HW02:
     def ch2(self):
         '''
-        �бN�A�p��X�Ӫ����׶�J�H�U�ܼơA�U�з|�g�{���۰ʧ��C
+        請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
         Ch2P2_19a = "xxx"
-        �N��O
-        Ch2   : �ĤG��
-        P2_19a: �ĤG�������B�� PRACTICE SET �q���B�� Problems �� P2-19 �D�� a �p�D
-        "xxx" �G �A�n��J�A�����צb xxx �o�̡C
+        意思是
+        Ch2   : 第二章
+        P2_19a: 第二章結尾處的 PRACTICE SET 段落處的 Problems 第 P2-19 題的 a 小題
+        "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
-        #�@�~ 2. �ҥ� Ch2. P2.19
+        #作業 2. 課本 Ch2. P2.19
         self.Ch2P2_19a = "10"
         self.Ch2P2_19b = "17"
         self.Ch2P2_19c = "6"
         self.Ch2P2_19d = "8"
 
-        #�@�~ 3. �ҥ� Ch2. P2.20
+        #作業 3. 課本 Ch2. P2.20
         self.Ch2P2_20a = "14"
         self.Ch2P2_20b = "8"
         self.Ch2P2_20c = "13"
         self.Ch2P2_20d = "4"
 
-        #�@�~ 4. �ҥ� Ch2. P2.22
+        #作業 4. 課本 Ch2. P2.22
         self.Ch2P2_22a = "00010001 11101010 00100010 00001110"
         self.Ch2P2_22b = "00001110 00111000 11101010 00111000"
         self.Ch2P2_22c = "01101110 00001110 00111000 01001110"
@@ -98,30 +98,30 @@ class HW02:
 
     def ch3(self):
         '''
-        �бN�A�p��X�Ӫ����׶�J�H�U�ܼơA�U�з|�g�{���۰ʧ��C
+        請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
         Ch3P3_28a = "xxx"
-        �N��O
-        Ch3   : �ĤT��
-        P3_28a: �ĤT�������B�� PRACTICE SET �q���B�� Problems �� P3-28 �D�� a �p�D
-        "xxx" �G �A�n��J�A�����צb xxx �o�̡C
+        意思是
+        Ch3   : 第三章
+        P3_28a: 第三章結尾處的 PRACTICE SET 段落處的 Problems 第 P3-28 題的 a 小題
+        "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
-        #�@�~ 5. �ҥ� Ch3. P3.28
-        self.Ch3P3_28a = ""
-        self.Ch3P3_28b = ""
-        self.Ch3P3_28c = ""
-        self.Ch3P3_28d = ""
+        #作業 5. 課本 Ch3. P3.28
+        self.Ch3P3_28a = "234"
+        self.Ch3P3_28b = "560"
+        self.Ch3P3_28c = "874"
+        self.Ch3P3_28d = "888"
 
-        #�@�~ 6. �ҥ� Ch3. P3.30
-        self.Ch3P3_30a = ""
-        self.Ch3P3_30b = ""
-        self.Ch3P3_30c = ""
-        self.Ch3P3_30d = ""
+        #作業 6. 課本 Ch3. P3.30
+        self.Ch3P3_30a = "234"
+        self.Ch3P3_30b = "560"
+        self.Ch3P3_30c = "875"
+        self.Ch3P3_30d = "889"
 
 
-if __name__ == '__main__': #�{���i�J�I�A�{���Ѧ���}�l����C�H�U�ܽd�U�Ъ����{���C
+if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
     checkHW02 = HW02()
     checkHW02.ch2()
-    if checkHW02.Ch2P2_19a == "10": #10 �O�o�D�����ѡC�����ˬd�o�D�����סC
+    if checkHW02.Ch2P2_19a == "10": #10 是這題的正解。此行檢查這題的答案。
         print("Ch2P2_19a:{0}".format("Correct!"))
     else:
         print("Ch2P2_19a:{0}".format("Incorrect!"))
