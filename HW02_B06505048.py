@@ -12,7 +12,11 @@ def bin2(N):
         remain=int(N%10)
         ans+=(remain)*(2**t)
         N//=10
-    print(str(ans))
+    
+    return N
+
+N = input()
+print(bin2(N))
 
 
 class HW02:
