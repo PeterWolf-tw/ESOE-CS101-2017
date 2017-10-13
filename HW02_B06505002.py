@@ -53,31 +53,20 @@ def int2bin(N):
 
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
-
-
-
-
-def main():
-    N =1100
-    print("二進位數字{0}的十進位表示法為：{1}".format(N,bin2int(N)))
-
-def bin2int(N): 
-
-    L = int(len(str(N))) 
-    A = 0                 
+def bin2int(N):
+    
+    L = int(len(str(N)))  #將輸入的二進位數字變成字串並數出他的長度
+    A = 0                 #設定兩個變數，其中A是用來計算最後的答案，K是用來計算迴圈運行的次數以及作為2的指數
     K = 0
-    while L > K :         
-        r = int(N%10)    
-        A = A + (2**K)*r  
-        N = N/10          
-        K = K + 1         
-        
-    str(A)                
+    while L > K :         #設定迴圈條件，當執行的次數等於輸入的二進位數字長度後，便不再執行迴圈
+        r = int(N%10)     #設定一個變數r,使其成為當前二進位數最右邊的數的值
+        A = A + (2**K)*r  #計算當前所得到的數的總和
+        N = N/10          #將當前二進位數最右邊的數值去掉
+        K = K + 1         #執行次數加1
+    
+    str(A)                #將最後的答案轉換成字串形式
     return A
 
-if __name__ == '__main__':
-      main()
-        
 class HW02:
     def ch2(self):
         '''
@@ -97,10 +86,10 @@ class HW02:
         self.Ch2P2_19d = "8"
 
         #作業 3. 課本 Ch2. P2.20
-        self.Ch2P2_20a = "15"
-        self.Ch2P2_20b = "9"
-        self.Ch2P2_20c = "14"
-        self.Ch2P2_20d = "5"
+        self.Ch2P2_20a = "14"
+        self.Ch2P2_20b = "8"
+        self.Ch2P2_20c = "13"
+        self.Ch2P2_20d = "4"
 
         #作業 4. 課本 Ch2. P2.22
         self.Ch2P2_22a = "00010001 11101010 00100010 00001110"
@@ -121,16 +110,16 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = "234"
-        self.Ch3P3_28b = "560"
-        self.Ch3P3_28c = "874"
-        self.Ch3P3_28d = "888"
+        self.Ch3P3_28a = "765"
+        self.Ch3P3_28b = "439"
+        self.Ch3P3_28c = "124"
+        self.Ch3P3_28d = "110"
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = "234"
-        self.Ch3P3_30b = "560"
-        self.Ch3P3_30c = "875"
-        self.Ch3P3_30d = "889"
+        self.Ch3P3_30a = "766"
+        self.Ch3P3_30b = "440"
+        self.Ch3P3_30c = "125"
+        self.Ch3P3_30d = "111"
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
