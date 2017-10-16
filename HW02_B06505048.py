@@ -4,19 +4,26 @@
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
 
-def bin2(N):
-    pos = int(len(str(N)))
-    ans = 0
-
-    for t in range(0,pos):
-        remain = int(N % 10)
-        ans += (remain)*(2**t)
-        N //= 10
+def func(N) :
+    word = str(N)
+    exp = ans = 0
+    
+    if '.' in word : #檢查是否為浮點數
+        exp = word.index('.') - 1
+    else :
+        exp = len(word) - 1
+    
+    for t in range(0,len(word)) :
+        if word[t] == '.' :
+            pass
+        else :
+            ans += (int(word[t]))*(2**exp)
+            exp -= 1
     
     return ans
 
-num = int(input())
-print(bin2(num))
+number = input()
+print(func(number))
 
 
 class HW02:
