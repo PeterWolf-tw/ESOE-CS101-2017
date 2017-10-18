@@ -110,14 +110,14 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = ""
-        self.Ch3P3_28b = ""
+        self.Ch3P3_28a = "765"
+        self.Ch3P3_28b = "439"
         self.Ch3P3_28c = ""
         self.Ch3P3_28d = ""
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = ""
-        self.Ch3P3_30b = ""
+        self.Ch3P3_30a = "766"
+        self.Ch3P3_30b = "440"
         self.Ch3P3_30c = ""
         self.Ch3P3_30d = ""
 
