@@ -209,6 +209,6 @@ if __name__== "__main__":
     Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0x0F51"
-    Ch4P4_16b = "overflow"
+    Ch4P4_16b = "0x0F2A"
     Ch4P4_16c = "0x8012"
     Ch4P4_16d = "overflow"
