@@ -79,7 +79,7 @@ def twoToTen(num):
         decimalValue+=int(i)*(2**(-index-1))
     return intValue+decimalValue
 
-def tenTOTwo(num):
+def tenToTwo(num):
     num1=num
     binary=[]
     while num1!=0:
