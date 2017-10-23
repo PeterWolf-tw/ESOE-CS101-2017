@@ -35,6 +35,87 @@ def charFreqLister(inputSTR):
 #resultLIST = [(freq, char, code), (freq, char, code), (freq, char, code),...]
 
 #return resultLIST
+def huffmanTranslater(inputSTR):
+    resultLIST = []
+    freq = {}
+    
+    for x in inputSTR:
+        freq[x] = inputSTR.count(x) 
+        freq[x]=  freq[x]/len(inputSTR)   
+    for y in freq:
+        resultLIST.append([freq[y], y])
+    
+    resultLIST.sort(key=lambda input:input[0], reverse=True)
+    L=resultLIST
+    L1=L
+    def FIND(w):
+        
+        k=1
+        a1=0
+        value=w[0][0]
+        while(k<len(w)):
+            
+            if(w[k][0]<value):
+                value=w[k][0]
+                a1=k
+            k=k+1
+        return a1
+    def dic(dc,A,B):
+        la=len(A)
+        lb=len(B)
+        k=1
+        while(k<la):
+            dc[A[k]]=dc[A[k]]+'0'
+            k=k+1
+        k=1
+        while(k<lb):
+            dc[B[k]]=dc[B[k]]+'1'
+            k=k+1
+        return dc
+    
+    long=len(L)
+    k=0
+    dict1={}
+    while(k<long):
+    
+        dict1[L[k][1]]=""
+        k=k+1
+
+    tree=[]
+    k=0
+    while(k<long):
+        tree.append(L[k])
+        k=k+1
+
+    while(len(tree)>1):
+    
+        A1=list(tree[FIND(tree)])
+        tree.pop(FIND(tree))
+        A2=list(tree[FIND(tree)])
+        tree.pop(FIND(tree))
+        dict1=dic(dict1,A1,A2)
+        A1.insert(0,(A1[0]+A2[0]))
+        A1.pop(1)
+        A2.pop(0)
+        A1=A1+A2
+    
+        tree.append(A1)
+
+    L=len(L1)
+    k=0
+    while(k<L):
+        g=dict1[L1[k][1]]
+        g=g[::-1]
+        L1[k].append(g)
+        k=k+1
+    return(L1)
+
+if __name__ == '__main__':
+    inputSTR=input('輸入一字串')
+    L1=huffmanTranslater(inputSTR)
+    print(L1)
+
+
 
 # 4 請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
 
@@ -102,20 +183,20 @@ if __name__== "__main__":
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "0 10000001 11001100000000000000000"
-    Ch3P3_20b = "1 10000010 10010100100000000000000"
-    Ch3P3_20c = "0 10000010 01101101000000000000000"
-    Ch3P3_20d = "1 01111101 10000000000000000000000"
+    Ch3P3_20a = "0100 0000 1110 0110 0000 0000 0000 0000"
+    Ch3P3_20b = "1100 0001 0100 1010 0100 0000 0000 0000"
+    Ch3P3_20c = "0100 0001 0011 0110 1000 0000 0000 0000"
+    Ch3P3_20d = "1011 1110 1100 0000 0000 0000 0000 0000"
     print("========")
-    Ch3P3_28a = "765"
-    Ch3P3_28b = "439"
-    Ch3P3_28c = "overflow"
-    Ch3P3_28d = "overflow"
+    Ch3P3_28a = "234"
+    Ch3P3_28b = "overflow"
+    Ch3P3_28c = "874"
+    Ch3P3_28d = "888"
     print("========")
-    Ch3P3_30a = "766"
-    Ch3P3_30b = "440"
-    Ch3P3_30c = "overflow"
-    Ch3P3_30d = "overflow"
+    Ch3P3_30a = "234"
+    Ch3P3_30b = "overflow"
+    Ch3P3_30c = "875"
+    Ch3P3_30d = "889"
     print("========")
     Ch4P4_3a = "0x99"
     Ch4P4_3b = "0x99"
@@ -128,16 +209,16 @@ if __name__== "__main__":
     Ch4P4_4d = "0xBB"
     print("========")
     Ch4P4_13a = "1184"
-    Ch4P4_13b = "-862"
-    Ch4P4_13c = "862"
+    Ch4P4_13b = "862"
+    Ch4P4_13c = "-862"
     Ch4P4_13d = "-1184"
     print("========")
     Ch4P4_15a = "overflow"
-    Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "overflow"
+    Ch4P4_15b = "not an overflow"
+    Ch4P4_15c = "not an overflow"
     Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = "0X0F51"
-    Ch4P4_16b = "overflow"
-    Ch4P4_16c = "0X8012"
+    Ch4P4_16a = "0x0F51"
+    Ch4P4_16b = "0x0F2A"
+    Ch4P4_16c = "0x8012"
     Ch4P4_16d = "overflow"
