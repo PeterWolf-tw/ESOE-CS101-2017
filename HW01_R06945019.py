@@ -1,18 +1,18 @@
-+#!/usr/bin/env python3
-+# -*- coding:utf-8 -*-
-+
-+
-+#Chapter 01
-+
-+#第 01 題
-+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 Turing Model，並寫在以下第 15 行處。
-+
-+#第 02 題
-+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 von Newmann Model，並寫在以下第 20 行處。
-+
-+
-+def modelPrinter(model):
-+    turingModelSTR = '''
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+
+
+#Chapter 01
+
+#第 01 題
+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 Turing Model，並寫在以下第 15 行處。
+
+#第 02 題
+#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 von Newmann Model，並寫在以下第 20 行處。
+
+
+def modelPrinter(model):
+    turingModelSTR = '''
      在討論Turing Model前，我們先將電腦定義成一個數值處理器。當我們給電腦特定的數值(input)，
      電腦也將回傳出特定的數值(output)，也就是一個input對應到一個output。有了上述概念後，
      Turing Model其實就是多了一組稱之為program的input。Program是用來定義我們給定電腦的
@@ -25,9 +25,9 @@
      (2)Head：讀出Tape上的數值，也可覆寫上面的數值。
      (3)Table：用來定義Head讀出Tape上的數值後，將如何進行。
      (4)State Register：用來儲存目前終端機的狀態。
-+    '''
-+    
-+    vonNewmannModelSTR = '''
+    '''
+    
+    vonNewmannModelSTR = '''
      vonNewmannModel有別於Turing Model的地方主要有兩點：
      (1)除了input/output data，program都儲存於記憶體內。而為了達到此一目的，input/output data和
         program必須是以相同得邏輯方式表達(相同的格式)。
@@ -40,17 +40,17 @@
      (3)Arithmetic logic unit(ALU)：執行數學的運算和判斷邏輯。
      (4)Controt unit：從主記憶體中提取指令碼。
      (5)Memory unit：儲存從input unit中傳來的待處理資料。
-+    '''
-+    
-+    if model == "Alen Turing":
-+        print(turingModelSTR)
-+    elif model == "von Newmann":
-+        print(vonNewmannModelSTR)
-+    else:
-+        pass
-+        
-+        
-+if __name__ == "__main__":
-+    modelPrinter("Alen Turing")
-+    print("=====我是分隔線=====")
-+    modelPrinter("von Newmann")
+    '''
+    
+    if model == "Alen Turing":
+        print(turingModelSTR)
+    elif model == "von Newmann":
+        print(vonNewmannModelSTR)
+    else:
+        pass
+        
+        
+if __name__ == "__main__":
+    modelPrinter("Alen Turing")
+    print("=====我是分隔線=====")
+    modelPrinter("von Newmann")
