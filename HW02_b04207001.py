@@ -67,11 +67,33 @@ def bin2int(N):
     str(A)                #將最後的答案轉換成字串形式
     return A
 
+def twoToTen(num):
+    intDeci=[]
+    intValue=0
+    decimalValue=0
+    for i in str(num).split('.'):
+       intDeci.append(i) 
+    for index,i in enumerate(intDeci[0][::-1]):
+        intValue+=int(i)*(2**index)
+    for index,i in enumerate(intDeci[1]):
+        decimalValue+=int(i)*(2**(-index-1))
+    return intValue+decimalValue
+
+def tenToTwo(num):
+    num1=num
+    binary=[]
+    while num1!=0:
+        binary.append(str(num1%2))
+        num1=int(num1/2)
+    print (''.join(binary[::-1]))
+
 class HW02:
     def ch2(self):
         '''
         請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
+
         Ch2P2_19a = "xxx"
+
         意思是
         Ch2   : 第二章
         P2_19a: 第二章結尾處的 PRACTICE SET 段落處的 Problems 第 P2-19 題的 a 小題
@@ -79,7 +101,7 @@ class HW02:
         '''
         #作業 2. 課本 Ch2. P2.19
         self.Ch2P2_19a = "10"
-        self.Ch2P2_19b = "17"
+        self.Ch2P2_19b = "18"   #錯誤
         self.Ch2P2_19c = "6"
         self.Ch2P2_19d = "8"
 
@@ -90,32 +112,34 @@ class HW02:
         self.Ch2P2_20d = "4"
 
         #作業 4. 課本 Ch2. P2.22
-        self.Ch2P2_22a = "00010001 11101010 00100010 00001110"
-        self.Ch2P2_22b = "00001110 00111000 11101010 00111000"
-        self.Ch2P2_22c = "01101110 00001110 00111000 01001110"
-        self.Ch2P2_22d = "00011000 00111000 00001101 00001011"
+        self.Ch2P2_22a = "10001 11101010 100010 1110"  #錯誤
+        self.Ch2P2_22b = "1110 111000 11101010 111000" #錯誤
+        self.Ch2P2_22c = "1101110 1110 111000 1001110" #錯誤
+        self.Ch2P2_22d = "11000 111000 1101 1011"  #錯誤
 
 
     def ch3(self):
         '''
         請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
+
         Ch3P3_28a = "xxx"
+
         意思是
         Ch3   : 第三章
         P3_28a: 第三章結尾處的 PRACTICE SET 段落處的 Problems 第 P3-28 題的 a 小題
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = "765" #錯誤
-        self.Ch3P3_28b = "439" #錯誤
-        self.Ch3P3_28c = "overflow" #錯誤
-        self.Ch3P3_28d = "overflow" #錯誤
+        self.Ch3P3_28a = "234"
+        self.Ch3P3_28b = "560"
+        self.Ch3P3_28c = "814"  #錯誤
+        self.Ch3P3_28d = "888"
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = "766" #錯誤
-        self.Ch3P3_30b = "440" #錯誤
-        self.Ch3P3_30c = "overflow" #錯誤
-        self.Ch3P3_30d = "overflow" #錯誤
+        self.Ch3P3_30a = "234"
+        self.Ch3P3_30b = "560"
+        self.Ch3P3_30c = "875"
+        self.Ch3P3_30d = "889"
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
@@ -125,3 +149,10 @@ if __name__ == '__main__': #程式進入點，程式由此行開始執行。以�
         print("Ch2P2_19a:{0}".format("Correct!"))
     else:
         print("Ch2P2_19a:{0}".format("Incorrect!"))
+
+
+    p=[24,56,13,11]
+    for i in p:
+        print(tenTOTwo(i))    
+        
+    

@@ -29,10 +29,10 @@ def modelPrinter(model):
     elif model == "von Newmann":        
         print(vonNewmannModelSTR)    
     else:       
-       pass  
+        pass  
     
     
-    if __name__ == "__main__":    
-        modelPrinter("Alen Turing")    
-        print("=====我是分隔線=====")    
-        modelPrinter("von Newmann")
+if __name__ == "__main__":    
+      modelPrinter("Alen Turing")    
+      print("=====我是分隔線=====")    
+      modelPrinter("von Newmann")

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
++#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
 
@@ -102,10 +102,10 @@ if __name__== "__main__":
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "0 10000001 11001100000000000000000"
-    Ch3P3_20b = "1 10000010 10010100100000000000000"
-    Ch3P3_20c = "0 10000010 01101101000000000000000"
-    Ch3P3_20d = "1 01111101 10000000000000000000000"
+    Ch3P3_20a = "01000000111001100000000000000000"
+    Ch3P3_20b = "01000001001101101000000000000000"
+    Ch3P3_20c = "11000001010010100100000000000000"
+    Ch3P3_20d = "10111110110000000000000000000000"
     print("========")
     Ch3P3_28a = "765"
     Ch3P3_28b = "439"
@@ -117,27 +117,27 @@ if __name__== "__main__":
     Ch3P3_30c = "overflow"
     Ch3P3_30d = "overflow"
     print("========")
-    Ch4P4_3a = "0x99"
-    Ch4P4_3b = "0x99"
-    Ch4P4_3c = "0xFF"
-    Ch4P4_3d = "0xFF"
+    Ch4P4_3a = "99"
+    Ch4P4_3b = "FF"
+    Ch4P4_3c = "99"
+    Ch4P4_3d = "FF"
     print("========")
-    Ch4P4_4a = "0x66"
-    Ch4P4_4b = "0xFF"
-    Ch4P4_4c = "0x11"
-    Ch4P4_4d = "0xBB"
+    Ch4P4_4a = "77"
+    Ch4P4_4b = "FF"
+    Ch4P4_4c = "11"
+    Ch4P4_4d = "11"
     print("========")
     Ch4P4_13a = "1184"
-    Ch4P4_13b = "-862"
-    Ch4P4_13c = "862"
+    Ch4P4_13b = "862"
+    Ch4P4_13c = "-862"
     Ch4P4_13d = "-1184"
     print("========")
     Ch4P4_15a = "overflow"
     Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "overflow"
+    Ch4P4_15c = "not overflow"
     Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = "0X0F51"
+    Ch4P4_16a = "0F51"
     Ch4P4_16b = "overflow"
-    Ch4P4_16c = "0X8012"
+    Ch4P4_16c = "8012"
     Ch4P4_16d = "overflow"

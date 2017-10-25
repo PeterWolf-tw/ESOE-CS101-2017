@@ -22,6 +22,7 @@ def modelPrinter(model):
     The major difference between Turing model and von Neumann model is thet the 'table' used to translate message is an additional
     input, that is, the logic of hoe to translate the input is 'user-friendly'.
     
+    #助教：你的程式無法執行，請修正後再上傳。
     
     
     if model == "Alen Turing":

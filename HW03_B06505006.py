@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
 
@@ -102,20 +102,20 @@ if __name__== "__main__":
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "0 10000001 11001100000000000000000"
+    Ch3P3_20a = "0 10000001 11001111111111111111111"
     Ch3P3_20b = "1 10000010 10010100100000000000000"
     Ch3P3_20c = "0 10000010 01101101000000000000000"
-    Ch3P3_20d = "1 01111101 10000000000000000000000"
+    Ch3P3_20d = "1 01111110 01100000000000000000000"
     print("========")
     Ch3P3_28a = "765"
     Ch3P3_28b = "439"
-    Ch3P3_28c = "overflow"
-    Ch3P3_28d = "overflow"
+    Ch3P3_28c = "874"
+    Ch3P3_28d = "888"
     print("========")
-    Ch3P3_30a = "766"
-    Ch3P3_30b = "440"
-    Ch3P3_30c = "overflow"
-    Ch3P3_30d = "overflow"
+    Ch3P3_30a = "235"
+    Ch3P3_30b = "561"
+    Ch3P3_30c = "875"
+    Ch3P3_30d = "889"
     print("========")
     Ch4P4_3a = "0x99"
     Ch4P4_3b = "0x99"
@@ -133,11 +133,11 @@ if __name__== "__main__":
     Ch4P4_13d = "-1184"
     print("========")
     Ch4P4_15a = "overflow"
-    Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "overflow"
+    Ch4P4_15b = "no overflow"
+    Ch4P4_15c = "no overflow"
     Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = "0X0F51"
+    Ch4P4_16a = "0F51"
     Ch4P4_16b = "overflow"
-    Ch4P4_16c = "0X8012"
+    Ch4P4_16c = "8012"
     Ch4P4_16d = "overflow"

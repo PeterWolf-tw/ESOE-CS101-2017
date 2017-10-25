@@ -19,6 +19,7 @@ def modelPrinter(model):
     vonNewmannModelSTR = '''
     von Neumann Model是一個將機器的program部分儲存在memory的一個想法，這樣操作的程序不再是被固定寫死的，而是可以更改的。然而，要完成這樣的模型，program跟data就必須以相同的方式儲存在memory裡，因此如何區分program和data就變得十分重要。
     '''
+    #助教：你的說明再加上同組其它成員的說明，就是最完整的答案了。
     
     if model == "Alen Turing":
         print(turingModelSTR)

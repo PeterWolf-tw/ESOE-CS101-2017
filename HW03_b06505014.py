@@ -91,21 +91,27 @@ def conXOR(inputSTR_X, inputSTR_Y):
 
 
 if __name__== "__main__":
-    condition00X = ""
-    condition00Y = ""
+    condition00X = "001010010"
+    condition00Y = "110101111"
 
     condition01 = condNOT(condition00X)
+    condition02 = condAND(condition00X,condition00Y)
+    condition03 = condOR(condition00X,condition00Y)
+    condition04 = conXOR(condition00X,condition00Y)
     print(condition01)
+    print(condition02)
+    print(condition03)
+    print(condition04)
 
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "01000000111001100000000000000000"
-    Ch3P3_20b = "11000001010010100100000000000000"
-    Ch3P3_20c = "01000001001101101000000000000000"
-    Ch3P3_20d = "10111110110000000000000000000000"
+    Ch3P3_20a = "0100 0000 1110 0110 0000 0000 0000 0000"
+    Ch3P3_20b = "1100 0001 0100 1010 0100 0000 0000 0000"
+    Ch3P3_20c = "0100 0000 1100 1101 0000 0000 0000 0000"
+    Ch3P3_20d = "1011 1110 1100 0000 0000 0000 0000 0000"
     print("========")
     Ch3P3_28a = "234"
     Ch3P3_28b = "560"
@@ -137,7 +143,7 @@ if __name__== "__main__":
     Ch4P4_15c = "not overflow"
     Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = "0X0F51"
+    Ch4P4_16a = "0x0F51"
     Ch4P4_16b = "overflow"
-    Ch4P4_16c = "0X8012"
+    Ch4P4_16c = "0x8012"
     Ch4P4_16d = "overflow"

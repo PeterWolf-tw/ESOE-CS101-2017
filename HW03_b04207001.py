@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Oct  5 20:16:11 2017
+
+@author: rjlin
+"""
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
@@ -11,6 +17,74 @@
 
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
+
+def tenToTwo(x):
+    integer = abs(int(x))
+    floating = abs(x - int(x))
+    intList=[]
+    floatList=[]
+    while integer != 0:
+        intList.insert(0, integer % 2)
+        integer = int(integer / 2)
+    while floating != 0:
+        floatList.append(int(floating * 2))
+        floating = floating * 2 - int(floating * 2)
+    if x < 0:
+        intList.insert(0, '-')
+    return intList + ['.'] + floatList
+
+def IEEE32(x):
+    output = [0] * 32
+    if x[0] == '-':
+        output[0] = 1
+        x.remove('-')
+    exponent = 0
+    small = False
+    for index, value in enumerate(x):
+        if value == '.':
+            x.remove('.')
+            if index != 0:
+                exponent = index - 1
+            else:
+                small = True
+                exponent = -1
+        elif small:
+            if value == 0:
+                exponent += -1
+            else:
+                small = False
+                
+    print (exponent)
+    biExponent = tenToTwo(exponent + 127)
+    biExponent.remove('.')
+    print (biExponent)
+    if biExponent[0] == '-' or exponent + 127 > 255:
+        return 'overflow'
+    for index, value in enumerate(biExponent):
+        output[index+1] = value
+              
+    x = x + [0]*23
+    for index in range(len(output[9::])):
+        output[index+9] = x[index+1]
+    return output
+    
+# calculate the 0.XXXX numbers got wrong number
+
+
+
+def joinNum(inputList):
+    string = ''
+    for i in inputList:
+        string += str(i)
+    return string
+        
+def pipeLine(x):
+    a = tenToTwo(x)
+    b = IEEE32(a)  
+    c = joinNum(b)
+    return c
+    
+
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
@@ -24,8 +98,14 @@ def charFreqLister(inputSTR):
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
-
-
+def charList(inputStr):
+    dictionary={}
+    for i in inputStr:
+        if i in dictionary:
+            dictionary[i]+=1.0/len(inputStr)
+        else:
+            dictionary[i]=1.0/len(inputStr)
+    return dictionary
 
 # 3.1 加分題 (有做有加分，沒做不扣分)：請用課堂中提到的「霍夫曼編碼]
 #     (https://zh.wikipedia.org/wiki/霍夫曼編碼) 為你之前設計的
@@ -107,37 +187,37 @@ if __name__== "__main__":
     Ch3P3_20c = "01000001001101101000000000000000"
     Ch3P3_20d = "10111110110000000000000000000000"
     print("========")
-    Ch3P3_28a = "234"
-    Ch3P3_28b = "560"
-    Ch3P3_28c = "874"
-    Ch3P3_28d = "888"
+    Ch3P3_28a = "765"
+    Ch3P3_28b = "439"
+    Ch3P3_28c = "124"
+    Ch3P3_28d = "110"
     print("========")
-    Ch3P3_30a = "234"
-    Ch3P3_30b = "560"
-    Ch3P3_30c = "875"
-    Ch3P3_30d = "889"
+    Ch3P3_30a = ""
+    Ch3P3_30b = ""
+    Ch3P3_30c = ""
+    Ch3P3_30d = ""
     print("========")
-    Ch4P4_3a = "0x99"
-    Ch4P4_3b = "0x99"
-    Ch4P4_3c = "0xFF"
-    Ch4P4_3d = "0xFF"
+    Ch4P4_3a = ""
+    Ch4P4_3b = ""
+    Ch4P4_3c = ""
+    Ch4P4_3d = ""
     print("========")
-    Ch4P4_4a = "0x66"
-    Ch4P4_4b = "0xFF"
-    Ch4P4_4c = "0x11"
-    Ch4P4_4d = "0xBB"
+    Ch4P4_4a = ""
+    Ch4P4_4b = ""
+    Ch4P4_4c = ""
+    Ch4P4_4d = ""
     print("========")
-    Ch4P4_13a = "1184"
-    Ch4P4_13b = "-862"
-    Ch4P4_13c = "862"
-    Ch4P4_13d = "-1184"
+    Ch4P4_13a = ""
+    Ch4P4_13b = ""
+    Ch4P4_13c = ""
+    Ch4P4_13d = ""
     print("========")
-    Ch4P4_15a = "overflow"
-    Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "not overflow"
-    Ch4P4_15d = "overflow"
+    Ch4P4_15a = ""
+    Ch4P4_15b = ""
+    Ch4P4_15c = ""
+    Ch4P4_15d = ""
     print("========")
-    Ch4P4_16a = "0X0F51"
-    Ch4P4_16b = "overflow"
-    Ch4P4_16c = "0X8012"
-    Ch4P4_16d = "overflow"
+    Ch4P4_16a = ""
+    Ch4P4_16b = ""
+    Ch4P4_16c = ""
+    Ch4P4_16d = ""
