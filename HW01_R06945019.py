@@ -41,7 +41,7 @@ def modelPrinter(model):
      (4)Controt unit：從主記憶體中提取指令碼。
      (5)Memory unit：儲存從input unit中傳來的待處理資料。
     '''
-    
+    #助教：計算機科學中通常把 input 和 output 視為同一個單元，叫 I/O。
     if model == "Alen Turing":
         print(turingModelSTR)
     elif model == "von Newmann":

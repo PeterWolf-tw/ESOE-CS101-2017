@@ -35,7 +35,7 @@ def modelPrinter(model):
    4.輸入單元 Input Unit
    5.輸出單元 Output Unit
     '''
-    
+    #助教：計算機科學的領域裡通常把 input 和 output 視為同一個單元，叫 I/O
     if model == "Alen Turing":
         print(turingModelSTR)
     elif model == "von Newmann":

@@ -26,6 +26,7 @@ def modelPrinter(model):
     "table" used to translate message is an additional input, that is, the logic
     of how to translate the input is "user-friendly".
     '''
+    #助教: You'll need to explain what "user-friendly" is.
     
     if model == "Alen Turing":
         print(turingModelSTR)

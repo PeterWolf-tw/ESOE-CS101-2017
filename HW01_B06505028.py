@@ -24,6 +24,7 @@ def modelPrinter(model):
     von Newmann Model在概念上和turing model十分相近，但是von Newmann 進一步把機器切割成四個區塊
     :輸出／輸入、記憶體、計算邏輯單位與控制單元，並把計算規則和輸入看成相同的形式，一起納入記憶體。
     '''
+    #助教：請和同組同學討論一下。你的答案還差一點點。若能說明 von Newmann 模型的四個區塊各自的功能會更好。
     
     if model == "Alen Turing":
         print(turingModelSTR)
