@@ -142,8 +142,8 @@ if __name__== "__main__":
     print("========")
     Ch4P4_15a = "overflow"
     Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "overflow"
-    Ch4P4_15d = "not overflow"
+    Ch4P4_15c = "not overflow"
+    Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0x0F51"
     Ch4P4_16b = "overflow"
