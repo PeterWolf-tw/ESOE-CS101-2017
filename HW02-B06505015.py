@@ -71,7 +71,9 @@ class HW02:
     def ch2(self):
         '''
         請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
+
         Ch2P2_19a = "xxx"
+
         意思是
         Ch2   : 第二章
         P2_19a: 第二章結尾處的 PRACTICE SET 段落處的 Problems 第 P2-19 題的 a 小題
@@ -99,23 +101,25 @@ class HW02:
     def ch3(self):
         '''
         請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
+
         Ch3P3_28a = "xxx"
+
         意思是
         Ch3   : 第三章
         P3_28a: 第三章結尾處的 PRACTICE SET 段落處的 Problems 第 P3-28 題的 a 小題
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = "765"
-        self.Ch3P3_28b = "439"
-        self.Ch3P3_28c = "overflow"
-        self.Ch3P3_28d = "overflow"
+        self.Ch3P3_28a = "234"
+        self.Ch3P3_28b = "560"
+        self.Ch3P3_28c = "874"
+        self.Ch3P3_28d = "888"
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = "766"
-        self.Ch3P3_30b = "440"
-        self.Ch3P3_30c = "overflow"
-        self.Ch3P3_30d = "overflow"
+        self.Ch3P3_30a = "234"
+        self.Ch3P3_30b = "560"
+        self.Ch3P3_30c = "875"
+        self.Ch3P3_30d = "889"
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。

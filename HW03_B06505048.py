@@ -11,21 +11,19 @@
 
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
-def frequent(inputSTR):
-    result = []
+def charFreqLister(inputSTR):
+    resultLIST = []
     freq = {}
     
     for x in inputSTR:
         freq[x] = inputSTR.count(x) 
         freq[x]=  freq[x]/len(inputSTR)   
     for y in freq:
-        result.append((freq[y], y))
+        resultLIST.append((freq[y], y))
     
-    result.sort(key=lambda input:input[0], reverse=True)
-    return result
+    resultLIST.sort(key=lambda input:input[0], reverse=True)
+    return resultLIST
 
-word=str(input())
-print(frequent(word))
 
 
 
@@ -40,53 +38,48 @@ print(frequent(word))
 
 # 4 請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
 
-#condition00 not condition01
-def fNOT(inX):
-    out = ""
-    for i in inX:
-        if i == "0":
-            out = out + "1"
-        else:
-            out = out + "0"
-    return out
+def fNOT(N1) :
+    ans = ""
+    k = 1
+    for t in range(0,len(N1)) :
+        ans += str(k - int(N1[t]))
+    return ans
 
-#condition00 and condition02
-def fAND(inX, inY):
-    out= ""    
-    for (x,y) in zip(inX,inY):
-        if x=="1" and y =="1":
-            out = out + "1"
-        else: 
-            out = out + "0"
-    return out
+def fAND(N1,N2) :
+    ans = ""
+    for t in range(1,min(len(N1),len(N2)) + 1) :
+        if N1[-t] == "1" and N2[-t] == "1" :
+            ans = "1" + ans
+        else :
+            ans = "0" + ans
+    return ans
 
-#condition00 or condition03
-def fOR(inX, inY):
-    out = ""
-    for (x,y) in zip(inX,inY):
-        if x=="0" and y=="0":
-            out = out + "0"
-        else:
-            out = out + "1"
-    return out
+def fOR(N1,N2) :
+    ans = ""
+    for t in range(1,min(len(N1),len(N2)) + 1) :
+        if N1[-t] == "0" and N2[-t] == "0" :
+            ans = "0" + ans
+        else :
+            ans = "1" + ans
+    return ans
 
-#condition00 xor condition04
-def fXOR(inX, inY):
-    out = ""
-    for (x,y) in zip(inX,inY):
-        if x == "0" and y =="0":
-            out = out + "0"
-        elif x == "1" and y == "1":
-            out = out + "0"
-        else: 
-            out = out + "1"
-    return out
+def fXOR(N1,N2) :
+    ans = ""
+    for t in range(1,min(len(N1),len(N2)) + 1) :
+        if N1[-t] == "0" and N2[-t] == "0" :
+            ans = "0" + ans
+        elif N1[-t] == "1" and N2[-t] == "1" :
+            ans = "0" + ans
+        else :
+            ans = "1" + ans
+    return ans
+
 
 
 if __name__== "__main__":
-    condition00X = "01101101"
-    condition00Y = "10100111"
-
+    condition00X = "10110110"
+    condition00Y = "01011100"
+    
     condition01 = fNOT(condition00X)
     condition02 = fAND(condition00X,condition00Y)
     condition03 = fOR(condition00X,condition00Y)
@@ -96,15 +89,14 @@ if __name__== "__main__":
     print(condition03)
     print(condition04)
 
-
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
     Ch3P3_20a = "01000000111001100000000000000000"
-    Ch3P3_20b = "01000001001101101000000000000000"
-    Ch3P3_20c = "11000001010010100100000000000000"
+    Ch3P3_20b = "11000001010010100100000000000000"
+    Ch3P3_20c = "01000001001101101000000000000000"
     Ch3P3_20d = "10111110110000000000000000000000"
     print("========")
     Ch3P3_28a = "234"
@@ -138,6 +130,6 @@ if __name__== "__main__":
     Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0x0F51"
-    Ch4P4_16b = "0x0F2A"
+    Ch4P4_16b = "overflow"
     Ch4P4_16c = "0x8012"
-    Ch4P4_16d = "0x7F51"
+    Ch4P4_16d = "overflow"

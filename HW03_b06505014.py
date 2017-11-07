@@ -12,7 +12,6 @@
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
 def charFreqLister(inputSTR):
-    inputSTR = ("dhfjka asdjkf")
     resultLIST = []
     freq = {}
     
@@ -23,10 +22,7 @@ def charFreqLister(inputSTR):
         resultLIST.append((freq[y], y))
     
     resultLIST.sort(key=lambda input:input[0], reverse=True)
-    print(resultLIST)
     return resultLIST
-inputSTR = []
-charFreqLister(inputSTR)
 
 
 
@@ -95,8 +91,8 @@ def conXOR(inputSTR_X, inputSTR_Y):
 
 
 if __name__== "__main__":
-    condition00X = "11011001"
-    condition00Y = "00101001"
+    condition00X = "001010010"
+    condition00Y = "110101111"
 
     condition01 = condNOT(condition00X)
     condition02 = condAND(condition00X,condition00Y)
@@ -112,42 +108,42 @@ if __name__== "__main__":
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = ""
-    Ch3P3_20b = ""
-    Ch3P3_20c = ""
-    Ch3P3_20d = ""
+    Ch3P3_20a = "0100 0000 1110 0110 0000 0000 0000 0000"
+    Ch3P3_20b = "1100 0001 0100 1010 0100 0000 0000 0000"
+    Ch3P3_20c = "0100 0000 1100 1101 0000 0000 0000 0000"
+    Ch3P3_20d = "1011 1110 1100 0000 0000 0000 0000 0000"
     print("========")
-    Ch3P3_28a = ""
-    Ch3P3_28b = ""
-    Ch3P3_28c = ""
-    Ch3P3_28d = ""
+    Ch3P3_28a = "234"
+    Ch3P3_28b = "560"
+    Ch3P3_28c = "874"
+    Ch3P3_28d = "888"
     print("========")
-    Ch3P3_30a = ""
-    Ch3P3_30b = ""
-    Ch3P3_30c = ""
-    Ch3P3_30d = ""
+    Ch3P3_30a = "234"
+    Ch3P3_30b = "560"
+    Ch3P3_30c = "875"
+    Ch3P3_30d = "889"
     print("========")
-    Ch4P4_3a = ""
-    Ch4P4_3b = ""
-    Ch4P4_3c = ""
-    Ch4P4_3d = ""
+    Ch4P4_3a = "0x99"
+    Ch4P4_3b = "0x99"
+    Ch4P4_3c = "0xFF"
+    Ch4P4_3d = "0xFF"
     print("========")
-    Ch4P4_4a = ""
-    Ch4P4_4b = ""
-    Ch4P4_4c = ""
-    Ch4P4_4d = ""
+    Ch4P4_4a = "0x66"
+    Ch4P4_4b = "0xFF"
+    Ch4P4_4c = "0x11"
+    Ch4P4_4d = "0xBB"
     print("========")
-    Ch4P4_13a = ""
-    Ch4P4_13b = ""
-    Ch4P4_13c = ""
-    Ch4P4_13d = ""
+    Ch4P4_13a = "1184"
+    Ch4P4_13b = "-862"
+    Ch4P4_13c = "862"
+    Ch4P4_13d = "-1184"
     print("========")
-    Ch4P4_15a = ""
-    Ch4P4_15b = ""
-    Ch4P4_15c = ""
-    Ch4P4_15d = ""
+    Ch4P4_15a = "overflow"
+    Ch4P4_15b = "not overflow"
+    Ch4P4_15c = "not overflow"
+    Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = ""
-    Ch4P4_16b = ""
-    Ch4P4_16c = ""
-    Ch4P4_16d = ""
+    Ch4P4_16a = "0x0F51"
+    Ch4P4_16b = "overflow"
+    Ch4P4_16c = "0x8012"
+    Ch4P4_16d = "overflow"

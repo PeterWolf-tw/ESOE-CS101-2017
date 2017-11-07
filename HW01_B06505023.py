@@ -10,6 +10,7 @@
  +#第 02 題
  +#請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 von Newmann Model，並寫在以下第 20 行處。
  +
+ #助教：你的作業是直接從 github 的 source code 頁複製下來的，沒辦法執行哦。
  +
  +def modelPrinter(model):
  +    turingModelSTR = '''Turing machine的基本概念是模擬人進行數學運算的過程，包含三個部分：無限長的紙帶(TAPE)

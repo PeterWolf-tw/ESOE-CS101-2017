@@ -110,7 +110,7 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = "765"
+        self.Ch3P3_28a = "765" #錯誤
         self.Ch3P3_28b = "overflow"
         self.Ch3P3_28c = "874"
         self.Ch3P3_28d = "888"

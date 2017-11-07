@@ -46,8 +46,7 @@ def huffmanTranslater(inputSTR):
         resultLIST.append([freq[y], y])
     
     resultLIST.sort(key=lambda input:input[0], reverse=True)
-    L=resultLIST
-    L1=L
+    L1=L=resultLIST
     def FIND(w):
         
         k=1

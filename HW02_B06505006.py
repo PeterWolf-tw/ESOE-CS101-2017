@@ -106,16 +106,16 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = ""
-        self.Ch3P3_28b = ""
-        self.Ch3P3_28c = ""
-        self.Ch3P3_28d = ""
+        self.Ch3P3_28a = "765" #錯誤
+        self.Ch3P3_28b = "439" #錯誤
+        self.Ch3P3_28c = "874"
+        self.Ch3P3_28d = "888"
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = ""
-        self.Ch3P3_30b = ""
-        self.Ch3P3_30c = ""
-        self.Ch3P3_30d = ""
+        self.Ch3P3_30a = "766" #錯誤
+        self.Ch3P3_30b = "440" #錯誤
+        self.Ch3P3_30c = "875"
+        self.Ch3P3_30d = "889"
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。

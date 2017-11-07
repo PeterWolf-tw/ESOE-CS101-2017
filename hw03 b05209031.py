@@ -17,12 +17,15 @@ def charFreqLister(inputSTR):
     
     for x in inputSTR:
         freq[x] = inputSTR.count(x) 
-        freq[x] = freq[x]/len(inputSTR)   
+        freq[x]=  freq[x]/len(inputSTR)   
     for y in freq:
         resultLIST.append((freq[y], y))
     
     resultLIST.sort(key=lambda input:input[0], reverse=True)
-    print(resultLIST)
+    return resultLIST
+
+
+
 
 # 3.1 加分題 (有做有加分，沒做不扣分)：請用課堂中提到的「霍夫曼編碼]
 #     (https://zh.wikipedia.org/wiki/霍夫曼編碼) 為你之前設計的
@@ -88,36 +91,29 @@ def conXOR(inputSTR_X, inputSTR_Y):
 
 
 if __name__== "__main__":
-    condition00X = str(bin(0x99)[2:])
-    condition00Y = str(bin(0xff)[2:])
-    print(condition00X)
-    print(condition00Y,end = "\n\n")
+    condition00X = ""
+    condition00Y = ""
+
     condition01 = condNOT(condition00X)
-    condition02 = condAND(condition00X,condition00Y)
-    condition03 = condOR(condition00X,condition00Y)
-    condition04 = conXOR(condition00X,condition00Y)
     print(condition01)
-    print(condition02)
-    print(condition03)
-    print(condition04)
-    
+
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "0 10000001 11001100000000000000000"
-    Ch3P3_20b = "1 10000010 10010100100000000000000"
-    Ch3P3_20c = "0 10000010 01101101000000000000000"
-    Ch3P3_20d = "1 01111101 10000000000000000000000"
+    Ch3P3_20a = "01000000111001100000000000000000"
+    Ch3P3_20b = "11000001010010100100000000000000"
+    Ch3P3_20c = "01000001001101101000000000000000"
+    Ch3P3_20d = "10111110110000000000000000000000"
     print("========")
     Ch3P3_28a = "234"
-    Ch3P3_28b = "overflow"
+    Ch3P3_28b = "560"
     Ch3P3_28c = "874"
     Ch3P3_28d = "888"
     print("========")
     Ch3P3_30a = "234"
-    Ch3P3_30b = "overflow"
+    Ch3P3_30b = "560"
     Ch3P3_30c = "875"
     Ch3P3_30d = "889"
     print("========")
@@ -141,7 +137,7 @@ if __name__== "__main__":
     Ch4P4_15c = "not overflow"
     Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = "0x0F51"
+    Ch4P4_16a = "0X0F51"
     Ch4P4_16b = "overflow"
-    Ch4P4_16c = "0x8012"
+    Ch4P4_16c = "0X8012"
     Ch4P4_16d = "overflow"
