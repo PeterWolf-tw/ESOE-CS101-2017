@@ -91,8 +91,8 @@ def conXOR(inputSTR_X, inputSTR_Y):
 
 
 if __name__== "__main__":
-    condition00X = ""
-    condition00Y = ""
+    condition00X = "01001"
+    condition00Y = "10110"
 
     condition01 = condNOT(condition00X)
     print(condition01)
