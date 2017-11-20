@@ -24,8 +24,6 @@ def charFreqLister(inputSTR):
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
-if __name__== "__main__":
-    main()
 
 
 
@@ -93,47 +91,41 @@ def conXOR(inputSTR_X, inputSTR_Y):
 
 
 if __name__== "__main__":
-    condition00X = "00100010"
-    condition00Y = "10101010"
+    condition00X = ""
+    condition00Y = ""
 
     condition01 = condNOT(condition00X)
-    condition02 = condAND(condition00X, condition00Y)
-    condition03 = condOR(condition00X, condition00Y)
-    condition04 = conXOR(condition00X, condition00Y)
     print(condition01)
-    print(condition02)
-    print(condition03)
-    print(condition04)
 
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "0 10000001 11001100000000000000000"
-    Ch3P3_20b = "1 10000010 10010100100000000000000"
-    Ch3P3_20c = "0 10000010 01101101000000000000000"
-    Ch3P3_20d = "1 01111101 10000000000000000000000"
+    Ch3P3_20a = "0100 0000 1110 0110 0000 0000 0000 0000"
+    Ch3P3_20b = "0100 0001 0011 0110 1000 0000 0000 0000"
+    Ch3P3_20c = "1100 0001 0100 1010 0100 0000 0000 0000"
+    Ch3P3_20d = "1011 1110 1100 0000 0000 0000 0000 0000"
     print("========")
-    Ch3P3_28a = "234"
-    Ch3P3_28b = "560"
-    Ch3P3_28c = "874"
-    Ch3P3_28d = "888"
+    Ch3P3_28a = "465"
+    Ch3P3_28b = "239"
+    Ch3P3_28c = "overflow"
+    Ch3P3_28d = "overflow"
     print("========")
-    Ch3P3_30a = "234"
-    Ch3P3_30b = "560"
-    Ch3P3_30c = "875"
-    Ch3P3_30d = "889"
+    Ch3P3_30a = "466"
+    Ch3P3_30b = "240"
+    Ch3P3_30c = "overflow"
+    Ch3P3_30d = "overflow"
     print("========")
-    Ch4P4_3a = "0x99"
-    Ch4P4_3b = "0x99"
-    Ch4P4_3c = "0xFF"
-    Ch4P4_3d = "0xFF"
+    Ch4P4_3a = "0101 0101"
+    Ch4P4_3b = "1111 1111"
+    Ch4P4_3c = "0101 0101"
+    Ch4P4_3d = "1111 1111"
     print("========")
-    Ch4P4_4a = "0x66"
-    Ch4P4_4b = "0xFF"
-    Ch4P4_4c = "0x11"
-    Ch4P4_4d = "0xBB"
+    Ch4P4_4a = "1010 1010"
+    Ch4P4_4b = "1111 1111"
+    Ch4P4_4c = "0001 0001"
+    Ch4P4_4d = "0111 0111"
     print("========")
     Ch4P4_13a = "1184"
     Ch4P4_13b = "-862"

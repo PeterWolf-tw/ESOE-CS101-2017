@@ -24,8 +24,6 @@ def charFreqLister(inputSTR):
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
-if __name__== "__main__":
-    main()
 
 
 
@@ -93,35 +91,29 @@ def conXOR(inputSTR_X, inputSTR_Y):
 
 
 if __name__== "__main__":
-    condition00X = "00100010"
-    condition00Y = "10101010"
+    condition00X = "01001"
+    condition00Y = "10110"
 
     condition01 = condNOT(condition00X)
-    condition02 = condAND(condition00X, condition00Y)
-    condition03 = condOR(condition00X, condition00Y)
-    condition04 = conXOR(condition00X, condition00Y)
     print(condition01)
-    print(condition02)
-    print(condition03)
-    print(condition04)
 
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "0 10000001 11001100000000000000000"
-    Ch3P3_20b = "1 10000010 10010100100000000000000"
-    Ch3P3_20c = "0 10000010 01101101000000000000000"
-    Ch3P3_20d = "1 01111101 10000000000000000000000"
+    Ch3P3_20a = "01000000111001100000000000000000"
+    Ch3P3_20b = "11000001010010100100000000000000"
+    Ch3P3_20c = "01000001001101101000000000000000"
+    Ch3P3_20d = "10111110110000000000000000000000"
     print("========")
     Ch3P3_28a = "234"
-    Ch3P3_28b = "560"
+    Ch3P3_28b = "overflow"
     Ch3P3_28c = "874"
     Ch3P3_28d = "888"
     print("========")
     Ch3P3_30a = "234"
-    Ch3P3_30b = "560"
+    Ch3P3_30b = "overflow"
     Ch3P3_30c = "875"
     Ch3P3_30d = "889"
     print("========")
@@ -136,8 +128,8 @@ if __name__== "__main__":
     Ch4P4_4d = "0xBB"
     print("========")
     Ch4P4_13a = "1184"
-    Ch4P4_13b = "-862"
-    Ch4P4_13c = "862"
+    Ch4P4_13b = "862"
+    Ch4P4_13c = "-862"
     Ch4P4_13d = "-1184"
     print("========")
     Ch4P4_15a = "overflow"

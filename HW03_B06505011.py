@@ -24,8 +24,6 @@ def charFreqLister(inputSTR):
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
-if __name__== "__main__":
-    main()
 
 
 
@@ -40,66 +38,52 @@ if __name__== "__main__":
 
 # 4 請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
 
-#condition00 not condition01
-def condNOT(inputSTR_X):
-    outputSTR = ""
-    for i in inputSTR_X:
-        if i == "0":
-            outputSTR = outputSTR + "1"
-        else:
-            outputSTR = outputSTR + "0"
-    return outputSTR
+def fNOT(N1) :
+    ans = ""
+    k = 1
+    for t in range(0,len(N1)) :
+        ans += str(k - int(N1[t]))
+    return ans
 
+def fAND(N1,N2) :
+    ans = ""
+    for t in range(1,min(len(N1),len(N2)) + 1) :
+        if N1[-t] == "1" and N2[-t] == "1" :
+            ans = "1" + ans
+        else :
+            ans = "0" + ans
+    return ans
 
-#condition00 and condition02
-def condAND(inputSTR_X, inputSTR_Y):
-    output= ""    
-    for (x,y) in zip(inputSTR_X,inputSTR_Y):
-        if x=="1" and y =="1":
-            output = output + "1"
-        else: 
-            output = output + "0"
-        
-    
-    return output
+def fOR(N1,N2) :
+    ans = ""
+    for t in range(1,min(len(N1),len(N2)) + 1) :
+        if N1[-t] == "0" and N2[-t] == "0" :
+            ans = "0" + ans
+        else :
+            ans = "1" + ans
+    return ans
 
-#condition00 or condition03
-def condOR(inputSTR_X, inputSTR_Y):
-    output = ""
-    for (x,y) in zip(inputSTR_X,inputSTR_Y):
-        if x=="0" and y=="0":
-            output = output + "0"
-        else:
-            output = output + "1"
-        
-    
-    
-    
-    return output
-
-#condition00 xor condition04
-def conXOR(inputSTR_X, inputSTR_Y):
-    output = ""
-    for (x,y) in zip(inputSTR_X,inputSTR_Y):
-        if x == "0" and y =="0":
-            output = output + "0"
-        elif x == "1" and y == "1":
-            output = output + "0"
-        else: 
-            output = output + "1"
-            
-    return output
+def fXOR(N1,N2) :
+    ans = ""
+    for t in range(1,min(len(N1),len(N2)) + 1) :
+        if N1[-t] == "0" and N2[-t] == "0" :
+            ans = "0" + ans
+        elif N1[-t] == "1" and N2[-t] == "1" :
+            ans = "0" + ans
+        else :
+            ans = "1" + ans
+    return ans
 
 
 
 if __name__== "__main__":
-    condition00X = "00100010"
-    condition00Y = "10101010"
-
-    condition01 = condNOT(condition00X)
-    condition02 = condAND(condition00X, condition00Y)
-    condition03 = condOR(condition00X, condition00Y)
-    condition04 = conXOR(condition00X, condition00Y)
+    condition00X = "10110110"
+    condition00Y = "01011100"
+    
+    condition01 = fNOT(condition00X)
+    condition02 = fAND(condition00X,condition00Y)
+    condition03 = fOR(condition00X,condition00Y)
+    condition04 = fXOR(condition00X,condition00Y)
     print(condition01)
     print(condition02)
     print(condition03)
@@ -110,10 +94,10 @@ if __name__== "__main__":
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
     
     print("Ans:")
-    Ch3P3_20a = "0 10000001 11001100000000000000000"
-    Ch3P3_20b = "1 10000010 10010100100000000000000"
-    Ch3P3_20c = "0 10000010 01101101000000000000000"
-    Ch3P3_20d = "1 01111101 10000000000000000000000"
+    Ch3P3_20a = "01000000111001100000000000000000"
+    Ch3P3_20b = "11000001010010100100000000000000"
+    Ch3P3_20c = "01000001001101101000000000000000"
+    Ch3P3_20d = "10111110110000000000000000000000"
     print("========")
     Ch3P3_28a = "234"
     Ch3P3_28b = "560"
