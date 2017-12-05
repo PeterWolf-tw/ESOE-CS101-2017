@@ -37,14 +37,11 @@ filepath='./44100.wav'
 outData = tapeAll
 outfile = filepath+'new.wav'
 outwave = wave.open(outfile, 'wb')
-nchannels = 1
-sampwidth = 2
-fs = 11025
-data_size = len(outData)
-framerate = int(fs)
-nframes = data_size
-comptype = "NONE"
-compname = "not compressed"
+
+
+
+framerate = int(11025)
+
 outwave.setparams((nchannels, sampwidth, framerate, nframes,
     comptype, compname))
 outwave.writeframes(outData)
