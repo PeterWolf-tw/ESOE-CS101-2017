@@ -49,6 +49,7 @@ def modelPrinter(model):
     (Control Unit)確保其他部分的順利進行與一些控制；輸入與輸出部分(I/O)，接收與發送處理前與處理後的資訊，各部分可互相溝通分享資料
     
     '''
+    #助教：感謝你還提供了個人的解釋。個人解釋的部份，我只數到「四」大部份，沒有你提到「五」大部份哦。如果你查到有些文章把 input 和 output 分開計的話，別忘了計算機科學中通常把 input 和 output 合稱 I/O 單元，而視為同一部份。
     
     if model == "Alen Turing":
         print(turingModelSTR)

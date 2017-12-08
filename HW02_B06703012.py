@@ -89,7 +89,7 @@ class HW02:
         self.Ch2P2_20a = "14"
         self.Ch2P2_20b = "8"
         self.Ch2P2_20c = "13"
-        self.Ch2P2_20d = "8"
+        self.Ch2P2_20d = "8" #錯誤
 
         #作業 4. 課本 Ch2. P2.22
         self.Ch2P2_22a = "00010001 11101010 00100010 00001110"
@@ -110,16 +110,16 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = "765"
-        self.Ch3P3_28b = "439"
-        self.Ch3P3_28c = ""
-        self.Ch3P3_28d = ""
+        self.Ch3P3_28a = "234"
+        self.Ch3P3_28b = "overflow"
+        self.Ch3P3_28c = "874"
+        self.Ch3P3_28d = "888"
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = "766"
-        self.Ch3P3_30b = "440"
-        self.Ch3P3_30c = ""
-        self.Ch3P3_30d = ""
+        self.Ch3P3_30a = "234"
+        self.Ch3P3_30b = "overflow"
+        self.Ch3P3_30c = "875"
+        self.Ch3P3_30d = "889"
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。

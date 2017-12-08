@@ -25,6 +25,7 @@ def modelPrinter(model):
                          後再將結果回傳到memory 儲存，並且輸出至output。需要注意的一點是control unit 在執行program 的指令時會按照「依序執行」的
                          基本邏輯來運作。Arithmetic logic unit 是算術邏輯元件，當control unit在執行程式時，遇到需要進行邏輯判斷或者算術運算時，
                          便後把工作分配給ALU來執行，它算好後會將結果回傳給control unit。'''
+                         #助教：計算機科學中通常把 input 和 output 視為同一單位，叫 I/O。
     if model == "Alen Turing":
         print(turingModelSTR)
     elif model == "von Newmann":
