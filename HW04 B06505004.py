@@ -7,7 +7,7 @@ crewDICT = {1: {"姓名": "莊博翰",
                 "學號": "B06505004"},
             2: {"姓名":"張在然",
                 "學號":"B06505002"},
-            3: {"姓名":"凃皓偉",
+            3: {"姓名":"凃皓瑋",
                 "學號":"B06505001"},
             4:{"姓名":"林鴻儒",
                 "學號":"B04207001"}
@@ -63,10 +63,10 @@ print(B1,'\n',B2,'\n',B3,'\n')
 # 第三題：請查詢 Python3 的 encode() 文件，利用 Python3 的 encode() 將以下的字串轉成 cp950, utf-8 和 utf-16 的編碼。
 s0 = "計算機概論與程式設計"
 
-s_cp950 = b'\xadp\xba\xe2\xbe\xf7\xb7\xa7\xbd\xd7\xbbP\xb5{\xa6\xa1\xb3]\xadp'
-s_utf8 = b'\xe8\xa8\x88\xe7\xae\x97\xe6\xa9\x9f\xe6\xa6\x82\xe8\xab\x96\xe8\x88\x87\xe7\xa8\x8b\xe5\xbc\x8f\xe8\xa8\xad\xe8\xa8\x88'
-s_utf16 = b'\xff\xfe\x08\x8a\x97{_j\x82i\xd6\x8a\x07\x82\x0bz\x0f_-\x8a\x08\x8a'
-
+s_cp950 = s0.encode('cp950','strict')
+s_utf8 = s0.encode('UTF-8','strict')
+s_utf16 = s0.encode('UTF-16','strict')
+print(s_cp950,'\n',s_utf8,'\n',s_utf16,'\n')
 
 
 # 第四題：請說明 Wifi 和 Bluetooth 之間...
