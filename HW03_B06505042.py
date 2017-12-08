@@ -11,6 +11,9 @@
 
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
+
+
+    
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
@@ -23,8 +26,12 @@ def charFreqLister(inputSTR):
     
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
+    print(resultLIST)
 
-
+if __name__ == '__main__':
+    inputSTR = "Hello i'm a smart girl"
+    print(charFreqLister(inputSTR))
+    
 
 
 # 3.1 加分題 (有做有加分，沒做不扣分)：請用課堂中提到的「霍夫曼編碼]
@@ -100,7 +107,7 @@ if __name__== "__main__":
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
-    
+
     print("Ans:")
     Ch3P3_20a = "0100 0000 1110 0110 0000 0000 0000 0000"
     Ch3P3_20b = "1100 0001 0100 1010 0100 0000 0000 0000"

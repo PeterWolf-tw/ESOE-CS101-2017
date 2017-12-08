@@ -58,7 +58,7 @@ def int2bin(N):
 
 
 def main():
-    N =11111
+    N =11110001001000000
     print("二進位數字{0}的十進位表示法為：{1}".format(N,bin2int(N)))
 
 def bin2int(N): 
