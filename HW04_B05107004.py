@@ -5,10 +5,10 @@
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名": "莊凱崴",
                 "學號": "B05107004"},
-            2: {"姓名":"王崇任",
-                "學號":"b05501018"},
-            3: {"姓名":"張銘軒",
-                "學號":"b06703012"},
+            2: {"姓名":"",
+                "學號":""},
+            3: {"姓名":"",
+                "學號":""},
             }
 
 
@@ -19,27 +19,27 @@ import os
 import sys
 import audioop
 sound = wave.open(os.path.split(os.path.realpath(__file__))[0]+ r"\44100.wav")
-
+soundNew = wave.open(os.path.split(os.path.realpath(__file__))[0]+ r"\44100.wav")
 
 #sound = wave.open(os.getcwd()+".\44100.wav")VS會把這個檔案丟去programfiles的python資料夾執行，這樣寫會找不到
 nchannels, sampwidth, framerate, nframes, comptype, compname = sound.getparams()
 
-#showAll = True # Show all data in raw string at once.
-#if showAll == True:
-    #tapeAll = sound.readframes(nframes)
+showAll = True # Show all data in raw string at once.
+if showAll == True:
+    tapeAll = sound.readframes(nframes)
     
-#else:
-    #for i in range(0, nframes):
-      #  waveData = sound.readframes(1)
-     #   tapeClip = struct.unpack("<h", waveData)
-        #print(tapeClip)
+else:
+    for i in range(0, nframes):
+        waveData = sound.readframes(1)
+        tapeClip = struct.unpack("<h", waveData)
+        print(tapeClip)
 f = open(os.path.split(os.path.realpath(__file__))[0]+ r"\11025.wav", 'wb')
 newWave = wave.open(f,'wb')
-n_frames = sound.getnframes()
-data = sound.readframes(n_frames)
-print(data)
+n_frames = soundNew.getnframes()
+data = soundNew.readframes(n_frames)
+#print(data)
 converted = audioop.ratecv(data, 2, 1, 44100, 11025, None)
-print(converted[0])
+#print(converted[0])
 #print(converted[1])
 cc=str(converted[0])
 newWave.setparams((1, 2, 11025, 0, 'NONE', 'Uncompressed'))
@@ -47,7 +47,7 @@ newWave.setparams((1, 2, 11025, 0, 'NONE', 'Uncompressed'))
 
 newWave.writeframes(converted[0])
 
-sound.close()
+soundNew.close()
 newWave.close()
 
 # 第二題：請查詢 Python3 的 decode() 文件，利用 Python3 的 decode() 將以下三個字串轉成中文字串並印出。
@@ -72,16 +72,16 @@ print(s0.encode("utf-16","strict"))
 
 # (a). 哪一種傳輸方式較為耗電？
 
-#Wifi
+print("Wifi")
 # (b). 哪一種傳輸方式較快速？
 
-#不一定，看版本
-#802.11ac > BT 5.0 > 802.11b
+print("不一定，看版本，802.11ac > BT 5.0 > 802.11b")
 
 # (c). 請實際測試：請查出你的手機型號採用的 Bluetooth 規格，再用你的手機拍攝一張照片，
 #      並透過 Bluetooth 傳送該照片到朋友的手機裡。 考量到雙方手機的藍芽設備規格以及照
 #      片的解析度、檔案大小，理論上應該耗時多少時間完成傳送？而實際上又耗了多少時間進行
 #      傳送？ 最後並請列出所有可能影響傳送時間的因素。
 
-#Sony Z5 Premium最高支援BT4.0(24Mbps)，一張5.83MB的照片用藍牙4.0傳輸，理論上需5.83*8/24=1.943333333.......秒
-#實際耗時的話我邊緣人朋友太少而且都拿哀鳳還沒辦法試
+print("Sony Z5 Premium最高支援BT4.0(24Mbps)，一張57.03KB的照片用藍牙4.0傳輸，理論上需57.03*8/24000=0.01901秒")
+print("實際耗時約5秒")
+print("系統編碼需時、傳輸時受到干擾(旁邊有2.4G的WIFI)、系統解碼需時等等")
