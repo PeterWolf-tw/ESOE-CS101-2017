@@ -19,16 +19,35 @@ crewDICT = {1: {"姓名": "詹心憲",
 # http://140.112.27.24:5566/
 #這個網頁中提到的三個頁面。 其中 http://140.112.27.24:5566/add?x=10&y=5 這個連結的 x 和 y 值可自定。
 
+
 import urllib.request
-response1 = urllib.request.urlopen('http://140.112.27.24:5566/')
-HTML1 = response1.read()
+target = urllib.request.urlopen('http://140.112.27.24:5566/') 
+data = target.read()
+print(data)
 
-response2 = urllib.request.urlopen('http://140.112.27.24:5566/add?x=10&y=5')
-HTML2 = response2.read()
+target = urllib.request.Request('http://140.112.27.24:5566/')
+responsedata = urllib.request.urlopen(target)
+data = responsedata.read()
+print(data)
 
-response3 = urllib.request.urlopen('http://140.112.27.24:5566/page')
-HTML3 = response3.read()
 
-print(HTML2)
 
-#分別將三個頁面存取在HTML1、HTML2和HTML3中，並額外並列印出HTML2的結果。
+target = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1000&y=1') 
+data = target.read()
+print(data)
+
+target = urllib.request.Request('http://140.112.27.24:5566/add?x=1000&y=1')
+responsedata = urllib.request.urlopen(target)
+data = responsedata.read()
+print(data)
+
+
+
+target = urllib.request.urlopen('http://140.112.27.24:5566/page') 
+data = target.read()
+print(data)
+
+target = urllib.request.Request('http://140.112.27.24:5566/page')
+responsedata = urllib.request.urlopen(target)
+data = responsedata.read()
+print(data)
