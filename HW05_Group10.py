@@ -25,7 +25,6 @@ target = urllib.request.urlopen('http://140.112.27.24:5566/')
 data = target.read()
 print(data)
 
-import urllib.request
 target = urllib.request.Request('http://140.112.27.24:5566/')
 responsedata = urllib.request.urlopen(target)
 data = responsedata.read()
@@ -33,12 +32,10 @@ print(data)
 
 
 
-import urllib.request
 target = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1000&y=1') 
 data = target.read()
 print(data)
 
-import urllib.request
 target = urllib.request.Request('http://140.112.27.24:5566/add?x=1000&y=1')
 responsedata = urllib.request.urlopen(target)
 data = responsedata.read()
@@ -46,12 +43,10 @@ print(data)
 
 
 
-import urllib.request
 target = urllib.request.urlopen('http://140.112.27.24:5566/page') 
 data = target.read()
 print(data)
 
-import urllib.request
 target = urllib.request.Request('http://140.112.27.24:5566/page')
 responsedata = urllib.request.urlopen(target)
 data = responsedata.read()
