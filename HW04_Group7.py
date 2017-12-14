@@ -29,19 +29,19 @@ else:
     for i in range(0, nframes):
         waveData = sound.readframes(1)
         tapeClip = struct.unpack("<h", waveData)
-        samp.append(tapeClip[0])
+        resamp.append(tapeClip[0])
         print(tapeClip)
 
 
-new = wave.open("777.wav",'w')
-new.setparams((1, 2, 11025, 110250, 'NONE', 'not compressed'))
+wavwrite = wave.open("777.wav",'w')
+wavwrite.setparams((1, 2, 11025, 110250, 'NONE', 'not compressed'))
 
 
 for i in range(0,nframes,4):
-    packed_value = struct.pack('h', samp[i])
-    new.writeframes(packed_value)
+    packed_value = struct.pack('h', resamp[i])
+    wavwrite.writeframes(packed_value)
     
-new.close()
+wavwrite.close()
 
 
 # 第二題：請查詢 Python3 的 decode() 文件，利用 Python3 的 decode() 將以下三個字串轉成中文字串並印出。
