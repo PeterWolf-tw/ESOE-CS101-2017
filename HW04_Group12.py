@@ -10,6 +10,8 @@ crewDICT = {1: {"姓名": "盧則全",
                 "學號":"b06505047"},
             3: {"姓名":"黃智遠",
                 "學號":"b06505049"},
+            4: {"姓名":"李宗澔",
+                "學號":"b03801013"}
             }
 
 
@@ -28,6 +30,15 @@ else:
         waveData = sound.readframes(1)
         tapeClip = struct.unpack("<h", waveData)
         print(tapeClip)
+sound.close()
+sound = wave.open("./Group12.wav","wb")
+outdata = tapeAll
+sound.setframerate(11025)
+sound.setnframes(110250)
+sound.setnchannels(nchannels)
+sound.setsampwidth(sampwidth)
+sound.writeframes(outdata)
+sound.close()
 
 
 # 第二題：請查詢 Python3 的 decode() 文件，利用 Python3 的 decode() 將以下三個字串轉成中文字串並印出。
