@@ -134,7 +134,7 @@ if __name__== "__main__":
     print("========")
     Ch4P4_15a = "overflow"
     Ch4P4_15b = "73"
-    Ch4P4_15c = "73"
+    Ch4P4_15c = "-73"
     Ch4P4_15d = "overflow"
     print("========")
     Ch4P4_16a = "0F51"
