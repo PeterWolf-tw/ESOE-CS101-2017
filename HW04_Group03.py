@@ -5,10 +5,12 @@
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名": "李鼎翊",
                 "學號": "B06505029"},
-            2: {"姓名":"",
-                "學號":""},
-            3: {"姓名":"",
-                "學號":""},
+            2: {"姓名":"謝心默",
+                "學號":"b06505017"},
+            3: {"姓名":"沈揚",
+                "學號":"b06505018"},
+            4: {"姓名":"韋昊臣",
+                "學號":"b06505031"}
             }
 
 
@@ -47,7 +49,13 @@ s0 = "計算機概論與程式設計"
 s_cp950 = b""
 s_utf8 = b""
 s_utf16 = b""
+print(s0.encode("cp950","strict"))
+print(s0.encode("utf-8","strict"))
+print(s0.encode("utf-16","strict"))
 
+b'\xadp\xba\xe2\xbe\xf7\xb7\xa7\xbd\xd7\xbbP\xb5{\xa6\xa1\xb3]\xadp'
+b'\xe8\xa8\x88\xe7\xae\x97\xe6\xa9\x9f\xe6\xa6\x82\xe8\xab\x96\xe8\x88\x87\xe7\xa8\x8b\xe5\xbc\x8f\xe8\xa8\xad\xe8\xa8\x88'
+b'\xff\xfe\x08\x8a\x97{_j\x82i\xd6\x8a\x07\x82\x0bz\x0f_-\x8a\x08\x8a'
 
 # 第四題：請說明 Wifi 和 Bluetooth 之間...
 # (a). 哪一種傳輸方式較為耗電？
