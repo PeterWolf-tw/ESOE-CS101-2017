@@ -34,6 +34,14 @@ b1 = b"\xa5x\xa4j\xa4u\xac\xec"
 b2 = b"\xe5\x8f\xb0\xe5\xa4\xa7\xe5\xb7\xa5\xe7\xa7\x91"
 b3 = b"\xff\xfe\xf0S'Y\xe5]\xd1y"
 
+print(b1.decode('big5','strict'))
+print(b2.decode('UTF-8','strict'))
+print(b3.decode('utf-16','ignore'))
+
+台大工科
+台大工科
+台大工科
+
 # 第三題：請查詢 Python3 的 encode() 文件，利用 Python3 的 encode() 將以下的字串轉成 cp950, utf-8 和 utf-16 的編碼。
 s0 = "計算機概論與程式設計"
 s_cp950 = b""
