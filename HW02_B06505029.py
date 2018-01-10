@@ -103,17 +103,17 @@ class  HW02 :
             P3_28a: 第三章結尾處的PRACTICE SET 段落處的Problems 第P3-28 題的a 小題
             "xxx" ： 你要填入你的答案在xxx 這裡。
             '''
-        #作業5.課本Ch3. P3.28
-        self .Ch3P3_28a =  " "
-        self .Ch3P3_28b =  " "
-        self .Ch3P3_28c =  " "
-        self .Ch3P3_28d =  " "
-        
-        #作業6.課本Ch3. P3.30
-        self .Ch3P3_30a =  " "
-        self .Ch3P3_30b =  " "
-        self .Ch3P3_30c =  " "
-        self .Ch3P3_30d =  " "
+         #作業 5. 課本 Ch3. P3.28
+        self.Ch3P3_28a = "234"
+        self.Ch3P3_28b = "560"
+        self.Ch3P3_28c = "874"
+        self.Ch3P3_28d = "888"
+
+        #作業 6. 課本 Ch3. P3.30
+        self.Ch3P3_30a = "234"
+        self.Ch3P3_30b = "560"
+        self.Ch3P3_30c = "875"
+        self.Ch3P3_30d = "889"
 
 
 if  __name__  ==  ' __main__ ' : #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
