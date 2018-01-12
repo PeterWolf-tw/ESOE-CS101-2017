@@ -18,6 +18,18 @@ Created on Thu Oct  5 20:16:11 2017
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
 
+def twoToTen(num):
+    intDeci=[]
+    intValue=0
+    decimalValue=0
+    for i in str(num).split('.'):
+       intDeci.append(i) 
+    for index,i in enumerate(intDeci[0][::-1]):
+        intValue+=int(i)*(2**index)
+    for index,i in enumerate(intDeci[1]):
+        decimalValue+=int(i)*(2**(-index-1))
+    return intValue+decimalValue
+
 def tenToTwo(x):
     integer = abs(int(x))
     floating = abs(x - int(x))
@@ -189,35 +201,35 @@ if __name__== "__main__":
     print("========")
     Ch3P3_28a = "765"
     Ch3P3_28b = "439"
-    Ch3P3_28c = "124"
-    Ch3P3_28d = "110"
+    Ch3P3_28c = "-874"
+    Ch3P3_28d = "-888"
     print("========")
-    Ch3P3_30a = ""
-    Ch3P3_30b = ""
-    Ch3P3_30c = ""
-    Ch3P3_30d = ""
+    Ch3P3_30a = "766"
+    Ch3P3_30b = "440"
+    Ch3P3_30c = "-875"
+    Ch3P3_30d = "-889"
     print("========")
-    Ch4P4_3a = ""
-    Ch4P4_3b = ""
-    Ch4P4_3c = ""
-    Ch4P4_3d = ""
+    Ch4P4_3a = "0x99"
+    Ch4P4_3b = "0x99"
+    Ch4P4_3c = "0xFF"
+    Ch4P4_3d = "0xFF"
     print("========")
-    Ch4P4_4a = ""
-    Ch4P4_4b = ""
-    Ch4P4_4c = ""
-    Ch4P4_4d = ""
+    Ch4P4_4a = "0x66"
+    Ch4P4_4b = "0xFF"
+    Ch4P4_4c = "0x11"
+    Ch4P4_4d = "0xBB"
     print("========")
-    Ch4P4_13a = ""
-    Ch4P4_13b = ""
-    Ch4P4_13c = ""
-    Ch4P4_13d = ""
+    Ch4P4_13a = "1184"
+    Ch4P4_13b = "-862"
+    Ch4P4_13c = "862"
+    Ch4P4_13d = "-1184"
     print("========")
-    Ch4P4_15a = ""
-    Ch4P4_15b = ""
-    Ch4P4_15c = ""
-    Ch4P4_15d = ""
+    Ch4P4_15a = "-87"
+    Ch4P4_15b = "73"
+    Ch4P4_15c = "-73"
+    Ch4P4_15d = "119"
     print("========")
-    Ch4P4_16a = ""
-    Ch4P4_16b = ""
-    Ch4P4_16c = ""
-    Ch4P4_16d = ""
+    Ch4P4_16a = "0F51"
+    Ch4P4_16b = "8012"
+    Ch4P4_16c = "0F2A"
+    Ch4P4_16d = "7F51"
