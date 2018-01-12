@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 
-# 繳交日期：2016.10.17
+# 繳交日期：2017.11.15
 
 # 作業內容：
 # 1. 請閱讀 Wikipedia 維基百科 IEEE754 條目 (https://zh.wikipedia.org/wiki/IEEE_754)
@@ -13,17 +13,16 @@
 #    並由高排到低。
 def charFreqLister(inputSTR):
     resultLIST = []
-    inputSTR=input("Enter a string:")
-    STRlen=len(inputSTR)
-    elList=[]
-    [elList.append(element) for element in inputSTR if element not in elList]
-    for element in elList:
-        time=inputSTR.count(element)
-        freq=time/STRlen
-        resultLIST.append((freq,element))
-    resultLIST.sort(reverse = True)
+    freq = {}
+    
+    for x in inputSTR:
+        freq[x] = inputSTR.count(x) 
+        freq[x]=  freq[x]/len(inputSTR)   
+    for y in freq:
+        resultLIST.append((freq[y], y))
+    
+    resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
-
 
 
 
@@ -52,41 +51,48 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    outputSTR=""
-    for i in inputSTR_X and j in inputSTR_Y:
-        if i=="0" or j=="0":
-            outputSTR=outputSTR+"0"
-        else:
-            outputSTR=outputSTR+"1"
-    return outputSTR
+    output= ""    
+    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+        if x=="1" and y =="1":
+            output = output + "1"
+        else: 
+            output = output + "0"
+        
     
-  
+    return output
 
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
-    outputSTR=""
-    for i in inputSTR_X and j in inputSTR_Y:
-        if i=="1" or j=="1":
-            outputSTR=outputSTR+"1"
+    output = ""
+    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+        if x=="0" and y=="0":
+            output = output + "0"
         else:
-            outputSTR=outputSTR+"0"
-    return outputSTR
-
+            output = output + "1"
+        
+    
+    
+    
+    return output
 
 #condition00 xor condition04
 def conXOR(inputSTR_X, inputSTR_Y):
-    outputSTR=""
-    for i in inputSTR_X and j in inputSTR_Y:
-        if i==j:
-            outputSTR=outputSTR+"0"
-        else:
-            outputSTR=outputSTR+"1"
-    return outputSTR
+    output = ""
+    for (x,y) in zip(inputSTR_X,inputSTR_Y):
+        if x == "0" and y =="0":
+            output = output + "0"
+        elif x == "1" and y == "1":
+            output = output + "0"
+        else: 
+            output = output + "1"
+            
+    return output
+
 
 
 if __name__== "__main__":
-    condition00X = "010111001010100001100011"
-    condition00Y = "010000110001011100101001"
+    condition00X = ""
+    condition00Y = ""
 
     condition01 = condNOT(condition00X)
     print(condition01)
@@ -98,18 +104,18 @@ if __name__== "__main__":
     print("Ans:")
     Ch3P3_20a = "0 10000001 11001100000000000000000"
     Ch3P3_20b = "1 10000010 10010100100000000000000"
-    Ch3P3_20c = "0 10000010 10101101000000000000000"
+    Ch3P3_20c = "0 10000010 01101101000000000000000"
     Ch3P3_20d = "1 01111101 10000000000000000000000"
     print("========")
-    Ch3P3_28a = "-765"
-    Ch3P3_28b = "-439"
-    Ch3P3_28c = "874"
-    Ch3P3_28d = "888"
+    Ch3P3_28a = "765"
+    Ch3P3_28b = "439"
+    Ch3P3_28c = "overflow"
+    Ch3P3_28d = "overflow"
     print("========")
-    Ch3P3_30a = "-766"
-    Ch3P3_30b = "-440"
-    Ch3P3_30c = "875"
-    Ch3P3_30d = "889"
+    Ch3P3_30a = "766"
+    Ch3P3_30b = "440"
+    Ch3P3_30c = "overflow"
+    Ch3P3_30d = "overflow"
     print("========")
     Ch4P4_3a = "0x99"
     Ch4P4_3b = "0x99"
@@ -128,10 +134,10 @@ if __name__== "__main__":
     print("========")
     Ch4P4_15a = "overflow"
     Ch4P4_15b = "not overflow"
-    Ch4P4_15c = "not overflow"
+    Ch4P4_15c = "overflow"
     Ch4P4_15d = "overflow"
     print("========")
-    Ch4P4_16a = "0x0F51"
+    Ch4P4_16a = "0X0F51"
     Ch4P4_16b = "overflow"
-    Ch4P4_16c = "0x8012"
+    Ch4P4_16c = "0X8012"
     Ch4P4_16d = "overflow"

@@ -3,7 +3,6 @@
 
 
 #Chapter 01
-#just for test
 
 #第 01 題
 #請和同組同學討論後，用平白易懂的描述，在 300 個字符內說明何為 Turing Model，並寫在以下第 15 行處。

@@ -26,7 +26,7 @@
 # #####################################################################################
 
 
-number = 100  #設定 number 這個變數的值為 2
+number = 1999  #設定 number 這個變數的值為 2
 print("number 的二進位表示法為：{0}".format(bin(number))) #將 2 餵入 bin(n) 函式中，並把 bin(n) 回傳的結果，接著餵給 print() 輸出在螢幕畫面上。
 
 # 你可以試著把 number 的值改為其它的數字，觀察看看。
@@ -53,12 +53,6 @@ def int2bin(N):
 
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
-!/usr/bin/env python3
- -*- coding:utf-8 -*-
-
-def main():
-    N = 1010
-    print("{0} 的十進位表示為 {1}.".format(N, bin2int(N)))
 def bin2int(N):
     
     L = int(len(str(N)))  #將輸入的二進位數字變成字串並數出他的長度
@@ -72,8 +66,6 @@ def bin2int(N):
     
     str(A)                #將最後的答案轉換成字串形式
     return A
-if __name__ == '__main__':
-    main()
 
 class HW02:
     def ch2(self):
@@ -114,16 +106,16 @@ class HW02:
         "xxx" ： 你要填入你的答案在 xxx 這裡。
         '''
         #作業 5. 課本 Ch3. P3.28
-        self.Ch3P3_28a = "-765" #錯誤
-        self.Ch3P3_28b = "-439" #錯誤
-        self.Ch3P3_28c = "874" #錯誤
-        self.Ch3P3_28d = "889" #錯誤
+        self.Ch3P3_28a = "234"
+        self.Ch3P3_28b = "560"
+        self.Ch3P3_28c = "874"
+        self.Ch3P3_28d = "888"
 
         #作業 6. 課本 Ch3. P3.30
-        self.Ch3P3_30a = "766"  #錯誤
-        self.Ch3P3_30b = "440 "  #錯誤
-        self.Ch3P3_30c = "875"  #錯誤
-        self.Ch3P3_30d = "889"  #錯誤
+        self.Ch3P3_30a = "234"
+        self.Ch3P3_30b = "560"
+        self.Ch3P3_30c = "875"
+        self.Ch3P3_30d = "889"
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
