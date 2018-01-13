@@ -19,3 +19,15 @@ crewDICT = {1: {"姓名": "楊欣哲",
 #並利用 urllib 和 request 兩個套件 (如果你的系統沒有，請自行安裝) 實作抓取
 # http://140.112.27.24:5566/
 #這個網頁中提到的三個頁面。 其中 http://140.112.27.24:5566/add?x=10&y=5 這個連結的 x 和 y 值可自定。
+import urllib.request
+output = urllib.request.urlopen('http://140.112.27.24:5566/')
+html1 = output.read().decode('utf-8')
+print(html1,'\n')
+
+output = urllib.request.urlopen('http://140.112.27.24:5566/add?x=10&y=5')
+html2 = output.read().decode('utf-8')
+print(html2,'\n')
+
+output = urllib.request.urlopen('http://140.112.27.24:5566/page')
+html3 = output.read().decode('utf-8')
+print(html3,'\n')
