@@ -55,3 +55,4 @@ if __name__ == '__main__': #程式進入點，程式由此行開始執行。以�
     if checkHW02.Ch2P2_19a == "10": #10 是這題的正解。此行檢查這題的答案。
         print("Ch2P2_19a:{0}".format("Correct!"))
     else:
+        #助教：程式未完結。

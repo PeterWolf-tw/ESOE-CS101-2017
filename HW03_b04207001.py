@@ -23,7 +23,7 @@ def twoToTen(num):
     intValue=0
     decimalValue=0
     for i in str(num).split('.'):
-       intDeci.append(i) 
+        intDeci.append(i) #縮排錯誤
     for index,i in enumerate(intDeci[0][::-1]):
         intValue+=int(i)*(2**index)
     for index,i in enumerate(intDeci[1]):
@@ -65,7 +65,7 @@ def IEEE32(x):
                 exponent += -1
             else:
                 small = False
-                
+
     print (exponent)
     biExponent = tenToTwo(exponent + 127)
     biExponent.remove('.')
@@ -74,12 +74,12 @@ def IEEE32(x):
         return 'overflow'
     for index, value in enumerate(biExponent):
         output[index+1] = value
-              
+
     x = x + [0]*23
     for index in range(len(output[9::])):
         output[index+9] = x[index+1]
     return output
-    
+
 # calculate the 0.XXXX numbers got wrong number
 
 
@@ -89,24 +89,24 @@ def joinNum(inputList):
     for i in inputList:
         string += str(i)
     return string
-        
+
 def pipeLine(x):
     a = tenToTwo(x)
-    b = IEEE32(a)  
+    b = IEEE32(a)
     c = joinNum(b)
     return c
-    
+
 
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
-    
+
     for x in inputSTR:
-        freq[x] = inputSTR.count(x) 
-        freq[x]=  freq[x]/len(inputSTR)   
+        freq[x] = inputSTR.count(x)
+        freq[x]=  freq[x]/len(inputSTR)
     for y in freq:
         resultLIST.append((freq[y], y))
-    
+
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
@@ -143,14 +143,14 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    output= ""    
+    output= ""
     for (x,y) in zip(inputSTR_X,inputSTR_Y):
         if x=="1" and y =="1":
             output = output + "1"
-        else: 
+        else:
             output = output + "0"
-        
-    
+
+
     return output
 
 #condition00 or condition03
@@ -161,10 +161,10 @@ def condOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         else:
             output = output + "1"
-        
-    
-    
-    
+
+
+
+
     return output
 
 #condition00 xor condition04
@@ -175,9 +175,9 @@ def conXOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         elif x == "1" and y == "1":
             output = output + "0"
-        else: 
+        else:
             output = output + "1"
-            
+
     return output
 
 
@@ -192,7 +192,7 @@ if __name__== "__main__":
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
-    
+
     print("Ans:")
     Ch3P3_20a = "01000000111001100000000000000000"
     Ch3P3_20b = "11000001010010100100000000000000"
