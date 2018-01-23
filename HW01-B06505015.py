@@ -38,6 +38,7 @@ def modelPrinter(model):
         pass
 
 
+
 if __name__ == "__main__":
     modelPrinter("Alen Turing")
     print("=====我是分隔線=====")
