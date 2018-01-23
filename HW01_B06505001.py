@@ -1,6 +1,3 @@
-Python 3.6.3 (v3.6.3:2c5fed8, Oct  3 2017, 17:26:49) [MSC v.1900 32 bit (Intel)] on win32
-Type "copyright", "credits" or "license()" for more information.
->>> @ -0,0 +1,34 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
@@ -22,21 +19,21 @@ def modelPrinter(model):
 改寫型態、變換狀態，且這套規則有個開始點跟結束點；狀態紀錄器註明了模型現在的狀態，以便讓機器遵
 循規則進行。Turing提出的這個模型，讓機器不只能處理一個問題，而讓建造一個多功能的機器變得可能。
     '''
-    
+
     vonNewmannModelSTR = '''von Neumann Model將機器的program部分儲存在memory。這樣操作的程序不
 再是被寫死的，而是可以更改的。然而，要完成這樣的模型，program跟data就必須以相同的型式儲存在memory
 裡，因此如何區分program和data就變得十分重要。
-    
+
     '''
-    
+
     if model == "Alen Turing":
         print(turingModelSTR)
     elif model == "von Newmann":
         print(vonNewmannModelSTR)
     else:
         pass
-        
-        
+
+
 if __name__ == "__main__":
     modelPrinter("Alen Turing")
     print("=====我是分隔線=====")
