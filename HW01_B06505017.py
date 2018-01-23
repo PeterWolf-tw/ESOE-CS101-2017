@@ -22,7 +22,7 @@ def modelPrinter(model):
         機器運作時會用讀寫頭在紙帶上讀出一個格子的資訊，根據它當前的內部狀態開始對程式進行查表，
         然後得出一個輸出動作，也就是是否在紙帶上寫入或改變資訊，還是移動讀寫頭到下一個格字，同時也會告訴它下一時刻內部狀態轉移到哪一個。
         '''
-    
+
     vonNewmannModelSTR = '''
         Von Newmann Model是一種將程式指令記憶體和數據記憶體合併在一起的電腦設計概念模型，也就是內存程式（Stored Program）的概念，
         簡單來說，就是使用記憶體來儲存計算機的指令與資料。
@@ -35,13 +35,14 @@ def modelPrinter(model):
         4.輸入單元 Input Unit
         5.輸出單元 Output Unit
         '''
-    
+
     if model == "Alen Turing":
         print(turingModelSTR)
     elif model == "von Newmann":
         print(vonNewmannModelSTR)
     else:
         pass
+
 
 
 if __name__ == "__main__":
