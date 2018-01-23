@@ -13,7 +13,7 @@
 #助教：你繳上來的程式無法執行啊！turingModelSTR 的值放錯位置了。
 def modelPrinter(model):
     turingModelSTR = '''
-    
+
     '''
     一台為了模仿人的運算過程的假想機器，首先分成4個部分，第一個是無限長的紙帶（tape）
     分成無限多個格子，其中每個格子上都有一個符號，第二個則是讀寫頭（頭），它能讀出當前所在格子中的符號並對此
@@ -28,15 +28,17 @@ def modelPrinter(model):
     （4）輸入（5）輸出，當在運算時，它會去記憶體中尋找特定資料以及特定運算規則並送往CPU（算術邏輯單元以及控制單元）
     ，當CPU算完後再將結果儲存在記憶體中
     '''
-    
+
+    #你的程式無法執行。請查明變數的使用方式。
+
     if model == "Alen Turing":
         print(turingModelSTR)
     elif model == "von Newmann":
         print(vonNewmannModelSTR)
     else:
         pass
-        
-        
+
+
 if __name__ == "__main__":
     modelPrinter("Alen Turing")
     print("=====我是分隔線=====")
