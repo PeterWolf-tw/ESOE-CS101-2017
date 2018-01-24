@@ -10,7 +10,7 @@ crewDICT = {1: {"姓名": "黃奕翔",
             3: {"姓名": "洪瑞馨",
                 "學號": "b06505020"},
             4: {"姓名": "林禹彤",
-                "學號": "b06505042"},            
+                "學號": "b06505042"},
             }
 
 
@@ -21,7 +21,7 @@ crewDICT = {1: {"姓名": "黃奕翔",
 
 
 import urllib.request
-target = urllib.request.urlopen('http://140.112.27.24:5566/') 
+target = urllib.request.urlopen('http://140.112.27.24:5566/')
 data = target.read()
 print(data)
 
@@ -30,9 +30,7 @@ responsedata = urllib.request.urlopen(target)
 data = responsedata.read()
 print(data)
 
-
-
-target = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1000&y=1') 
+target = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1000&y=1')
 data = target.read()
 print(data)
 
@@ -43,7 +41,7 @@ print(data)
 
 
 
-target = urllib.request.urlopen('http://140.112.27.24:5566/page') 
+target = urllib.request.urlopen('http://140.112.27.24:5566/page')
 data = target.read()
 print(data)
 
