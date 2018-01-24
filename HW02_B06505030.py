@@ -118,6 +118,7 @@ class HW02:
         self.Ch3P3_30d = "889"
 
 
+
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
     checkHW02 = HW02()
     checkHW02.ch2()
