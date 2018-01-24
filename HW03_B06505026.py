@@ -11,16 +11,17 @@
 
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
+
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
-    
+
     for x in inputSTR:
-        freq[x] = inputSTR.count(x) 
-        freq[x]=  freq[x]/len(inputSTR)   
+        freq[x] = inputSTR.count(x)
+        freq[x]=  freq[x]/len(inputSTR)
     for y in freq:
         resultLIST.append((freq[y], y))
-    
+
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
@@ -79,7 +80,7 @@ def condXOR(N1,N2) :
 if __name__== "__main__":
     condition00X = "10110110"
     condition00Y = "01011100"
-    
+
     condition01 = condNOT(condition00X)
     condition02 = condAND(condition00X,condition00Y)
     condition03 = condOR(condition00X,condition00Y)
@@ -92,7 +93,7 @@ if __name__== "__main__":
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
-    
+
     print("Ans:")
     Ch3P3_20a = "01000000111001100000000000000000"
     Ch3P3_20b = "11000001010010100100000000000000"

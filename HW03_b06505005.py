@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
-
 # 繳交日期：2016.10.17
 
 # 作業內容：
@@ -59,8 +58,8 @@ def condAND(inputSTR_X, inputSTR_Y):
         else:
             outputSTR=outputSTR+"1"
     return outputSTR
-    
-  
+
+
 
 #condition00 or condition03
 def condOR(inputSTR_X, inputSTR_Y):
@@ -94,7 +93,7 @@ if __name__== "__main__":
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
-    
+
     print("Ans:")
     Ch3P3_20a = "0 10000001 11001100000000000000000"
     Ch3P3_20b = "1 10000010 10010100100000000000000"

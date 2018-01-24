@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
+
 def main():
     x=input('enter a string:\n')
     print(charFreqLister(x))
@@ -7,15 +8,15 @@ def main():
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
-    
+
     for x in inputSTR:
-        freq[x] = inputSTR.count(x) 
-        freq[x]=  freq[x]/len(inputSTR)   
+        freq[x] = inputSTR.count(x)
+        freq[x]=  freq[x]/len(inputSTR)
     for y in freq:
         resultLIST.append((freq[y], y))
-    
+
     resultLIST.sort(key=lambda input:input[0], reverse=True)
-    
+
     return resultLIST
 
 
@@ -30,13 +31,13 @@ def condNOT(inputSTR_X):
 
 
 def condAND(inputSTR_X, inputSTR_Y):
-    output= ""    
+    output= ""
     for (x,y) in zip(inputSTR_X,inputSTR_Y):
         if x=="1" and y =="1":
             output = output + "1"
-        else: 
-            output = output + "0"    
-    
+        else:
+            output = output + "0"
+
     return output
 
 
@@ -47,7 +48,7 @@ def condOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         else:
             output = output + "1"
-        
+
     return output
 
 
@@ -58,16 +59,16 @@ def conXOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         elif x == "1" and y == "1":
             output = output + "0"
-        else: 
+        else:
             output = output + "1"
-            
+
     return output
 
 
 if __name__=="__main__":
     main()
-    
-    
+
+
     condition00X = str(bin(0xE5CC)[2:])
     condition00Y = str(bin(0xCCE5)[2:])
     print(condition00X)
@@ -79,9 +80,9 @@ if __name__=="__main__":
     print(condition01)
     print(condition02)
     print(condition03)
-    print(condition04)    
-    
-    
+    print(condition04)
+
+
     print("Ans:")
     Ch3P3_20a = "01000000111001100000000000000000"
     Ch3P3_20b = "11000001010011100100000000000000"
@@ -121,4 +122,4 @@ if __name__=="__main__":
     Ch4P4_16a = "0x0F51"
     Ch4P4_16b = "overflow"
     Ch4P4_16c = "0x8012"
-    Ch4P4_16d = "overflow"    
+    Ch4P4_16d = "overflow"

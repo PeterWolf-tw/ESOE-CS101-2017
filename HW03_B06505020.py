@@ -8,6 +8,7 @@
 
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
+
 def main():
     x="This is a string."
     print(charFreqLister(x))
@@ -15,13 +16,13 @@ def main():
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
-    
+
     for x in inputSTR:
-        freq[x] = inputSTR.count(x) 
-        freq[x]=  freq[x]/len(inputSTR)   
+        freq[x] = inputSTR.count(x)
+        freq[x]=  freq[x]/len(inputSTR)
     for y in freq:
         resultLIST.append((freq[y], y))
-    
+
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
@@ -54,11 +55,11 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    output= ""    
+    output= ""
     for (x,y) in zip(inputSTR_X,inputSTR_Y):
         if x=="1" and y =="1":
             output = output + "1"
-        else: 
+        else:
             output = output + "0"
     return output
 
@@ -80,7 +81,7 @@ def conXOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         elif x == "1" and y == "1":
             output = output + "0"
-        else: 
+        else:
             output = output + "1"
     return output
 
@@ -94,7 +95,7 @@ if __name__== "__main__":
     condition02 = condAND(condition00X, condition00Y)
     condition03 = condOR(condition00X, condition00Y)
     condition04 = conXOR(condition00X, condition00Y)
-    
+
     print(condition01)
     print(condition02)
     print(condition03)
@@ -105,7 +106,7 @@ if __name__== "__main__":
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
-    
+
     print("Ans:")
     Ch3P3_20a = "0 10000001 11001100000000000000000"
     Ch3P3_20b = "1 10000010 10010100100000000000000"
