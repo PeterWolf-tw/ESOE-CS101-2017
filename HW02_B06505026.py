@@ -4,7 +4,7 @@
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
 def bin2int(N):
-    
+
     L = int(len(str(N)))
     A = 0
     K = 0
@@ -13,7 +13,7 @@ def bin2int(N):
         A = A + (2**K)*r
         N = N/10
         K = K + 1
-    
+
     str(A)
     return A
 
@@ -21,9 +21,9 @@ class HW02:
     def ch2(self):
         '''
         請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
-        
+
         Ch2P2_19a = "xxx"
-        
+
         意思是
         Ch2   : 第二章
         P2_19a: 第二章結尾處的 PRACTICE SET 段落處的 Problems 第 P2-19 題的 a 小題
@@ -68,6 +68,7 @@ class HW02:
         self.Ch3P3_30b = "overflow"
         self.Ch3P3_30c = "875"
         self.Ch3P3_30d = "889"
+
 
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
