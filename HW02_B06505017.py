@@ -49,12 +49,12 @@ ans = ""
         ans = ans + str(j)
 print("{0} 的二進位表示為 {1}.".format(N, ans))
     return None
-
+#縮排錯誤。
 
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
 def bin2int(N):
-    
+
     L = int(len(str(N)))  #將輸入的二進位數字變成字串並數出他的長度
     A = 0                 #設定兩個變數，其中A是用來計算最後的答案，K是用來計算迴圈運行的次數以及作為2的指數
     K = 0
@@ -63,7 +63,7 @@ def bin2int(N):
         A = A + (2**K)*r  #計算當前所得到的數的總和
         N = N/10          #將當前二進位數最右邊的數值去掉
         K = K + 1         #執行次數加1
-    
+
     str(A)                #將最後的答案轉換成字串形式
     return A
 
@@ -82,20 +82,20 @@ class HW02:
         self.Ch2P2_19b = ""
         self.Ch2P2_19c = ""
         self.Ch2P2_19d = ""
-        
+
         #作業 3. 課本 Ch2. P2.20
         self.Ch2P2_20a = ""
         self.Ch2P2_20b = ""
         self.Ch2P2_20c = ""
         self.Ch2P2_20d = ""
-        
+
         #作業 4. 課本 Ch2. P2.22
         self.Ch2P2_22a = ""
         self.Ch2P2_22b = ""
         self.Ch2P2_22c = ""
         self.Ch2P2_22d = ""
-    
-    
+
+
     def ch3(self):
         '''
             請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
@@ -110,7 +110,7 @@ class HW02:
         self.Ch3P3_28b = ""
         self.Ch3P3_28c = ""
         self.Ch3P3_28d = ""
-        
+
         #作業 6. 課本 Ch3. P3.30
         self.Ch3P3_30a = ""
         self.Ch3P3_30b = ""
