@@ -2,6 +2,8 @@
 # -*- coding:utf-8 -*-
 #import time
 
+#可利用程式進入點讓程式的結構更完整。
+
 crewDICT = {1: {"姓名":"鍾詠年",
                "學號": "B06505025"},
             2: {"姓名":"陳彥璋",
@@ -9,7 +11,7 @@ crewDICT = {1: {"姓名":"鍾詠年",
             3: {"姓名":"林育田",
                 "學號":"B06505028"},
             4: {"姓名":"陳頌恩",
-                "學號":"B06505046"}            
+                "學號":"B06505046"}
             }
 
 # 第一題：請利用 wave 和 struct 套件讀出 44100.wav 的內容。該檔案的取樣率為 44100hz，請將其重新取樣為 11025hz並另存新檔。
@@ -40,7 +42,7 @@ new.setparams((1, 2, 11025, 110250, 'NONE', 'not compressed'))
 for i in range(0,nframes,4):
     packed_value = struct.pack('h', values[i])
     new.writeframes(packed_value)
-    
+
 new.close()
 
 # 第二題：請查詢 Python3 的 decode() 文件，利用 Python3 的 decode() 將以下三個字串轉成中文字串並印出。

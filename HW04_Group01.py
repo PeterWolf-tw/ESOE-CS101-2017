@@ -8,7 +8,7 @@ crewDICT = {1: {"姓名": "張哲浩",
             3: {"姓名":"張力權",
                 "學號":"b06505044"},
             4: {"姓名": "黃日新",
-                "學號": "B06505048"}            
+                "學號": "B06505048"}
             }
 
 # 第一題
@@ -27,6 +27,8 @@ for i in range(0, nframes):
     box.append(tapeClip)
 
 sound.close()
+
+#可利用程式進入點讓程式的結構更完整。
 
 G1 = wave.open('./Group01.wav', 'w')
 G1.setparams((1, 2, 11025, 110250, 'NONE', 'not compressed'))
