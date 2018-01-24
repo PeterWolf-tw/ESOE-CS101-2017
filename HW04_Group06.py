@@ -13,6 +13,7 @@ crewDICT = {1: {"姓名": "何珮瑄",
                 "學號":"B06505036"},
             }
 
+#可加入程式進入點以讓程式的結構更完整。
 
 # 第一題：請利用 wave 和 struct 套件讀出 44100.wav 的內容。該檔案的取樣率為 44100hz，請將其重新取樣為 11025hz並另存新檔。
 import wave
@@ -30,7 +31,7 @@ else:
         waveData = sound.readframes(1)
         tapeClip = struct.unpack("<h", waveData)
         origin = origin.append(tapeClip[0])
-        
+
 rewrite = wave.open("./11025.wav","wb")
 rewrite.setparams((1,2,11025,11025,"NONE","not compressed"))
 
@@ -78,3 +79,4 @@ s_utf16 = b"\xff\xfe\x08\x8a\x97{_j\x82i\xd6\x8a\x07\x82\x0bz\x0f_-\x8a\x08\x8a"
        #影響因素:<1>手機硬體規格
        #        <2>干擾源太多
                 <3>附近金屬影響
+#少了一個註解符號。

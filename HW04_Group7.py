@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+#可加入程式進入點，讓程式的結構更完整。
+
+
 #上繳作業前，請另存一份 "HW05_GroupXX.py"，那個 xx 就是你們的組別編號。 (如果不知道自己組別的，可從 CEIBA 上查詢。)
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名": "陳奕舟",
@@ -10,7 +13,7 @@ crewDICT = {1: {"姓名": "陳奕舟",
             3: {"姓名": "蔡育勝",
                 "學號": "b06505024"},
             4: {"姓名": "王曦",
-                "學號": "b06505040"},            
+                "學號": "b06505040"},
             }
 
 # 第一題：請利用 wave 和 struct 套件讀出 44100.wav 的內容。該檔案的取樣率為 44100hz，請將其重新取樣為 11025hz並另存新檔。
@@ -40,7 +43,7 @@ new.setparams((1, 2, 11025, 110250, 'NONE', 'not compressed'))
 for i in range(0,nframes,4):
     packed_value = struct.pack('h', values[i])
     new.writeframes(packed_value)
-    
+
 new.close()
 
 

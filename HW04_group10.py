@@ -10,8 +10,10 @@ crewDICT = {1: {"姓名": "黃奕翔",
             3: {"姓名": "洪瑞馨",
                 "學號": "b06505020"},
             4: {"姓名": "林禹彤",
-                "學號": "b06505042"},            
+                "學號": "b06505042"},
             }
+
+#可加入程式進入點讓程式的結構更完整。
 
 # 第一題：請利用 wave 和 struct 套件讀出 44100.wav 的內容。該檔案的取樣率為 44100hz，請將其重新取樣為 11025hz並另存新檔。
 import wave
@@ -40,7 +42,7 @@ new.setparams((1, 2, 11025, 110250, 'NONE', 'not compressed'))
 for i in range(0,nframes,4):
     packed_value = struct.pack('h', values[i])
     new.writeframes(packed_value)
-    
+
 new.close()
 
 

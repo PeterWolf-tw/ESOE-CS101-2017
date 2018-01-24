@@ -11,6 +11,7 @@ crewDICT = {1: {"姓名": "莊凱崴",
                 "學號":"B05501018"},
             }
 
+#可加入程式進入點讓程式的結構更完整。
 
 # 第一題：請利用 wave 和 struct 套件讀出 44100.wav 的內容。該檔案的取樣率為 44100hz，請將其重新取樣為 11025hz並另存新檔。
 import wave
@@ -27,7 +28,7 @@ nchannels, sampwidth, framerate, nframes, comptype, compname = sound.getparams()
 showAll = True # Show all data in raw string at once.
 if showAll == True:
     tapeAll = sound.readframes(nframes)
-    
+
 else:
     for i in range(0, nframes):
         waveData = sound.readframes(1)

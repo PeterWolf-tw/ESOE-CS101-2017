@@ -46,11 +46,11 @@ outwave.setparams((nchannels, sampwidth, framerate, nframes,
     comptype, compname))
 outwave.writeframes(outData)
 
+#你的 outwave 沒有產生任何檔案。少了一步。
 
 
 
 
-        
 # 第二題：請查詢 Python3 的 decode() 文件，利用 Python3 的 decode() 將以下三個字串轉成中文字串並印出。
 b1 = b"\xa5x\xa4j\xa4u\xac\xec"
 b2 = b"\xe5\x8f\xb0\xe5\xa4\xa7\xe5\xb7\xa5\xe7\xa7\x91"

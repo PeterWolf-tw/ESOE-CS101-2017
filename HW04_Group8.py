@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+#可加入程式進入點讓程式結構更完整。
+
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名":"詹心憲",
                 "學號":"B06505007"},
@@ -39,7 +41,7 @@ for i in range(0, nframes//4):
     waveData = source.readframes(1)
     result.writeframes(waveData)
     source.readframes(3)
-   
+
 result.close()
 source.close()
 

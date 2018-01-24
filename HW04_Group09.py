@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+#可加入程式進入點讓程式結構更完整。
+
 #上繳作業前，請另存一份 "HW05_GroupXX.py"，那個 xx 就是你們的組別編號。 (如果不知道自己組別的，可從 CEIBA 上查詢。)
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名": "陳心怡",
@@ -38,7 +40,7 @@ newfile.setparams((1, 2, 11025, 110250, 'NONE', 'not compressed'))
 for i in range(0,nframes,4):
     packed_value = struct.pack('h', values[i])
     newfile.writeframes(packed_value)
-    
+
 newfile.close()
 
 
