@@ -6,19 +6,19 @@
 def infunc(N) :
     word = str(N)
     exp = ans = 0
-    
+
     if '.' in word :
         exp = word.index('.') - 1
     else :
         exp = len(word) - 1
-    
+
     for t in range(0,len(word)) :
         if word[t] == '.' :
             pass
         else :
             ans += (int(word[t]))*(2**exp)
             exp -= 1
-    
+
     return ans
 
 
@@ -76,7 +76,7 @@ class HW02:
         self.Ch3P3_30b = "560"
         self.Ch3P3_30c = "875"
         self.Ch3P3_30d = "889"
-
+#The answers are incorrect.
 
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
     checkHW02 = HW02()
