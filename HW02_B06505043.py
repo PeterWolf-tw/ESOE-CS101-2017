@@ -1,3 +1,5 @@
+#缺乏檔頭
+
 def int2bin(N):
     M = N
     tmpLIST = []
@@ -22,7 +24,7 @@ def bin2int(N):
         A = A + 2**(K) * r
         N = N / 10
         K = K + 1
-        
+
     str(A)
     return A
 
@@ -32,17 +34,17 @@ class HW02:
         self.Ch2P2_19b = '17'
         self.Ch2P2_19c = '6'
         self.Ch2P2_19d = '8'
-        
+
         self.Ch2P2_20a = '14'
         self.Ch2P2_20b = '8'
         self.Ch2P2_20c = '13'
         self.Ch2P2_20d = '4'
-        
+
         self.Ch2P2_22a = '00010001 11101010 00100010 00001110'
         self.Ch2P2_22b = '00001110 00111000 11101010 00111000'
         self.Ch2P2_22c = '01101110 00001110 00111000 01001110'
-        self.Ch2P2_22d = '00011000 00111000 00001101 00001011'        
-    
+        self.Ch2P2_22d = '00011000 00111000 00001101 00001011'
+
     def ch3(self):
         self.Ch3P3_28a = "234"
         self.Ch3P3_28b = "overflow"
@@ -53,8 +55,8 @@ class HW02:
         self.Ch3P3_30b = "overflow"
         self.Ch3P3_30c = "875"
         self.Ch3P3_30d = "889"
-        
-        
+
+
 if __name__ == '__main__': #程式進入點，程式由此行開始執行。以下示範助教的批改程式。
     checkHW02 = HW02()
     checkHW02.ch2()
