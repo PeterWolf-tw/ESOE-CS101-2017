@@ -43,6 +43,7 @@ def int2bin(N):
         tmpLIST.append(remainder)
      N = (N - remainder) / 2
     tmpLIST.append(0)
+#Python 縮排是 4 個空格。
 
     ans = ""
     for j in tmpLIST[::-1]: #將 tmpLIST 中的數字從尾至頭傳入 j
@@ -54,7 +55,7 @@ def int2bin(N):
 #作業 1.
 # 請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
 def bin2int(N):
-    
+
     L = int(len(str(N)))  #將輸入的二進位數字變成字串並數出他的長度
     A = 0                 #設定兩個變數，其中A是用來計算最後的答案，K是用來計算迴圈運行的次數以及作為2的指數
     K = 0
@@ -63,7 +64,7 @@ def bin2int(N):
         A = A + (2**K)*r  #計算當前所得到的數的總和
         N = N/10          #將當前二進位數最右邊的數值去掉
         K = K + 1         #執行次數加1
-    
+
     str(A)                #將最後的答案轉換成字串形式
     return A
 
