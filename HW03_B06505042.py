@@ -13,17 +13,17 @@
 #    並由高排到低。
 
 
-    
+
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
-    
+
     for x in inputSTR:
-        freq[x] = inputSTR.count(x) 
-        freq[x]=  freq[x]/len(inputSTR)   
+        freq[x] = inputSTR.count(x)
+        freq[x]=  freq[x]/len(inputSTR)
     for y in freq:
         resultLIST.append((freq[y], y))
-    
+
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
     print(resultLIST)
@@ -31,7 +31,7 @@ def charFreqLister(inputSTR):
 if __name__ == '__main__':
     inputSTR = "Hello i'm a smart girl"
     print(charFreqLister(inputSTR))
-    
+
 
 
 # 3.1 加分題 (有做有加分，沒做不扣分)：請用課堂中提到的「霍夫曼編碼]
@@ -58,14 +58,14 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    output= ""    
+    output= ""
     for (x,y) in zip(inputSTR_X,inputSTR_Y):
         if x=="1" and y =="1":
             output = output + "1"
-        else: 
+        else:
             output = output + "0"
-        
-    
+
+
     return output
 
 #condition00 or condition03
@@ -76,10 +76,7 @@ def condOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         else:
             output = output + "1"
-        
-    
-    
-    
+
     return output
 
 #condition00 xor condition04
@@ -90,9 +87,9 @@ def conXOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         elif x == "1" and y == "1":
             output = output + "0"
-        else: 
+        else:
             output = output + "1"
-            
+
     return output
 
 

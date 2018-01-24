@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 
+
 # 繳交日期：2016.10.17
 
 # 作業內容：
@@ -14,13 +15,13 @@
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
-    
+
     for x in inputSTR:
-        freq[x] = inputSTR.count(x) 
-        freq[x]=  freq[x]/len(inputSTR)   
+        freq[x] = inputSTR.count(x)
+        freq[x]=  freq[x]/len(inputSTR)
     for y in freq:
         resultLIST.append((freq[y], y))
-    
+
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
@@ -79,7 +80,7 @@ def fXOR(N1,N2) :
 if __name__== "__main__":
     condition00X = "10110110"
     condition00Y = "01011100"
-    
+
     condition01 = fNOT(condition00X)
     condition02 = fAND(condition00X,condition00Y)
     condition03 = fOR(condition00X,condition00Y)
@@ -92,7 +93,7 @@ if __name__== "__main__":
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
-    
+
     print("Ans:")
     Ch3P3_20a = "01000000111001100000000000000000"
     Ch3P3_20b = "11000001010010100100000000000000"

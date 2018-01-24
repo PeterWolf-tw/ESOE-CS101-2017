@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 
+
 # 繳交日期：2016.10.17
 
 # 作業內容：
@@ -14,13 +15,13 @@
 def charFreqLister(inputSTR):
     resultLIST = []
     freq = {}
-    
+
     for x in inputSTR:
-        freq[x] = inputSTR.count(x) 
-        freq[x]=  freq[x]/len(inputSTR)   
+        freq[x] = inputSTR.count(x)
+        freq[x]=  freq[x]/len(inputSTR)
     for y in freq:
         resultLIST.append((freq[y], y))
-    
+
     resultLIST.sort(key=lambda input:input[0], reverse=True)
     return resultLIST
 
@@ -51,14 +52,14 @@ def condNOT(inputSTR_X):
 
 #condition00 and condition02
 def condAND(inputSTR_X, inputSTR_Y):
-    output= ""    
+    output= ""
     for (x,y) in zip(inputSTR_X,inputSTR_Y):
         if x=="1" and y =="1":
             output = output + "1"
-        else: 
+        else:
             output = output + "0"
-        
-    
+
+
     return output
 
 #condition00 or condition03
@@ -69,10 +70,10 @@ def condOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         else:
             output = output + "1"
-        
-    
-    
-    
+
+
+
+
     return output
 
 #condition00 xor condition04
@@ -83,9 +84,9 @@ def conXOR(inputSTR_X, inputSTR_Y):
             output = output + "0"
         elif x == "1" and y == "1":
             output = output + "0"
-        else: 
+        else:
             output = output + "1"
-            
+
     return output
 
 
@@ -100,7 +101,7 @@ if __name__== "__main__":
     # 5 請完成以下課本習題並將答案以字串型 (str or unicode) 填入。
     # Ch3 表示為第三章
     # P3_20a 表示為該章最後 Problem 處的 P3-20 題的第 a 小題。
-    
+
     print("Ans:")
     Ch3P3_20a = "0100 0000 1110 0110 0000 0000 0000 0000"
     Ch3P3_20b = "1100 0001 0100 1010 0100 0000 0000 0000"

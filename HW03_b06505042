@@ -32,7 +32,7 @@ if __name__ == '__main__':
     inputSTR = "Hello i'm a smart girl"
     print(charFreqLister(inputSTR))
 
-
+#程式進入點只有一個。你這麼寫就有兩個進入點了。
 
 # 3.1 加分題 (有做有加分，沒做不扣分)：請用課堂中提到的「霍夫曼編碼]
 #     (https://zh.wikipedia.org/wiki/霍夫曼編碼) 為你之前設計的
