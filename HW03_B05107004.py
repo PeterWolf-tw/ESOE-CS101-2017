@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
 
@@ -11,9 +11,6 @@
 
 # 3. 請利用以下空白範本設計一支程式。程式可輸入一段字串，並自動計算出字串中包括空白字元出現的機率。
 #    並由高排到低。
-
-
-
 
 
 if __name__== "__main__":
@@ -31,7 +28,7 @@ if __name__== "__main__":
         #resultLIST =[]
         #freq = {}
         #for x in inputSTR:
-            #freq[x] = inputSTR.count(x) 
+            #freq[x] = inputSTR.count(x)
             #freq[x]=  freq[x]/len(inputSTR)
         #for y in freq:
             #resultLIST.append((freq[y], y))
@@ -45,8 +42,8 @@ if __name__== "__main__":
 # e.g.,
 #reference to http://blog.game18.net/posts/2016/05/huo-fu-man-bian-ma/
     def huffmanTranslater(inputSTR):#實作霍夫曼解編碼器
-        
-        
+
+
         ResultList=[]#儲存字數統計結果
         nodelist=[]#儲存二元樹
         def freqanalysis(inputSTR):#為避免浮點數及過多全域變數，拋棄charFreqLister並重新實作字數統計
@@ -56,7 +53,7 @@ if __name__== "__main__":
                     ResultDict[c]+=1#則該項目計數+1
                 else:#否則
                     ResultDict[c]=1#新增該項目並將計數設為1
-            
+
             #將字典的(key:value)轉換成('字元',字數)形式存入list以便排序
             for c in ResultDict.keys():#走訪ResultDict
                 ResultList.append((c,ResultDict[c]))#依序存入ResultList
@@ -66,7 +63,7 @@ if __name__== "__main__":
                 print(ResultList[i])
                 i=i+1
             #結束字數統計
-        def MakeHuffTree(ResultList):#建立霍夫曼樹   
+        def MakeHuffTree(ResultList):#建立霍夫曼樹
             for element in ResultList:#走訪ResultList
                 nodelist.append(node(element[0],element[1]))#將'字元'存入節點的char屬性，將頻率存入節點的freq屬性
             while len(nodelist)>1:#重複此流程直到頻率列表中剩下一個節點
@@ -81,7 +78,7 @@ if __name__== "__main__":
         def HuffEncoder(char,tree):#實作編碼器
             code=""#宣告code為字串以儲存編碼
             while tree.left:#如果當前節點存在左節點(因霍夫曼樹為complete binary tree，亦即當前節點非終端節點)
-                
+
                 if char in tree.left.char:#如果找尋字元過程中經過一次左子節則編碼多一個'0'
                     code+='0'#在編碼加上'0'
                     tree=tree.left
@@ -92,14 +89,14 @@ if __name__== "__main__":
 
         def encode(char,codes):#給定一連串字元與字典，參照字典將字元編碼結果輸出
             global result#保持result為全域變數
-            
+
             for c in char:#走訪輸入字串並取出字元
                 result+=codes[c]#按字典將對應編碼接上輸出
-            
-            
-            
-            
-            
+
+
+
+
+
         def decode(code,tree):#實作解碼器
             CurrentNode=tree#設定初始化當前節點為根
             s=""#宣告s為字串
@@ -134,7 +131,7 @@ if __name__== "__main__":
 
 
 
-	
+
 # 4 請參考以下 condNOT() 的例子，設計四個 func() 依以下條件，能算出 condition02 ~ 04 的值
 
 #condition00 not condition01
@@ -153,7 +150,7 @@ if __name__== "__main__":
         for (x,y) in zip(inputSTR_X,inputSTR_Y):
             if x=="1" and y =="1":
                 output = output + "1"
-            else: 
+            else:
                 output = output + "0"
         return output
 
@@ -175,7 +172,7 @@ if __name__== "__main__":
                 output = output + "0"
             elif x == "1" and y == "1":
                 output = output + "0"
-            else: 
+            else:
                 output = output + "1"
         return output
 
