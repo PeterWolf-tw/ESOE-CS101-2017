@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+
 #上繳作業前，請另存一份 "HW05_GroupXX.py"，那個 xx 就是你們的組別編號。 (如果不知道自己組別的，可從 CEIBA 上查詢。)
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名": "何珮瑄",
@@ -8,7 +9,7 @@ crewDICT = {1: {"姓名": "何珮瑄",
             2: {"姓名":"楊桂清",
                 "學號":"B06505013"},
             3: {"姓名":"邱善培",
-                "學號":"B06505036"}, 
+                "學號":"B06505036"},
             4: {"姓名":"孔昭妮",
                 "學號":"B06505023"}
             }
@@ -19,7 +20,7 @@ crewDICT = {1: {"姓名": "何珮瑄",
 # http://140.112.27.24:5566/
 #這個網頁中提到的三個頁面。 其中 http://140.112.27.24:5566/add?x=10&y=5 這個連結的 x 和 y 值可自定。
 import urllib.request
-target = urllib.request.urlopen('http://140.112.27.24:5566/') 
+target = urllib.request.urlopen('http://140.112.27.24:5566/')
 data = target.read()
 print(data)
 
@@ -30,7 +31,7 @@ print(data)
 
 
 
-target = urllib.request.urlopen('http://140.112.27.24:5566/add?x=555&y=888') 
+target = urllib.request.urlopen('http://140.112.27.24:5566/add?x=555&y=888')
 data = target.read()
 print(data)
 
@@ -41,7 +42,7 @@ print(data)
 
 
 
-target = urllib.request.urlopen('http://140.112.27.24:5566/page') 
+target = urllib.request.urlopen('http://140.112.27.24:5566/page')
 data = target.read()
 print(data)
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+
 #上繳作業前，請另存一份 "HW05_GroupXX.py"，那個 xx 就是你們的組別編號。 (如果不知道自己組別的，可從 CEIBA 上查詢。)
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名": "李鼎翊",
@@ -22,7 +23,7 @@ crewDICT = {1: {"姓名": "李鼎翊",
 import urllib.request
 
 #方法一
-website = urllib.request.urlopen('http://140.112.27.24:5566/') 
+website = urllib.request.urlopen('http://140.112.27.24:5566/')
 data = website.read()
 #print(data)
 
@@ -35,7 +36,7 @@ print(data)
 
 
 #方法一
-website = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1&y=20') 
+website = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1&y=20')
 data = website.read()
 #print(str(int(data)))
 
@@ -48,7 +49,7 @@ print(str(int(data)))
 
 
 #方法一
-website = urllib.request.urlopen('http://140.112.27.24:5566/page') 
+website = urllib.request.urlopen('http://140.112.27.24:5566/page')
 data = website.read()
 #print(data)
 

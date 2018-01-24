@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+
 #上繳作業前，請另存一份 "HW05_GroupXX.py"，那個 xx 就是你們的組別編號。 (如果不知道自己組別的，可從 CEIBA 上查詢。)
 #請將組員名單詳列如下，並將範例說明用的「王大錘」及其學號取代為你的組員。若你的組員超過三人，請自行加上。
 crewDICT = {1: {"姓名": "陳心怡",
@@ -8,7 +9,7 @@ crewDICT = {1: {"姓名": "陳心怡",
             2: {"姓名": "楊千瑩",
                 "學號": "b06505032"},
             3: {"姓名": "溫皓良",
-                "學號": "b04505050"},            
+                "學號": "b04505050"},
             }
 
 
@@ -19,7 +20,7 @@ crewDICT = {1: {"姓名": "陳心怡",
 
 
 import urllib.request
-website = urllib.request.urlopen('http://140.112.27.24:5566/') 
+website = urllib.request.urlopen('http://140.112.27.24:5566/')
 result = website.read()
 print(result)
 
@@ -32,7 +33,7 @@ print(result)
 
 
 import urllib.request
-website = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1000&y=1') 
+website = urllib.request.urlopen('http://140.112.27.24:5566/add?x=1000&y=1')
 result = website.read()
 print(result)
 
@@ -45,7 +46,7 @@ print(result)
 
 
 import urllib.request
-website = urllib.request.urlopen('http://140.112.27.24:5566/page') 
+website = urllib.request.urlopen('http://140.112.27.24:5566/page')
 result = website.read()
 print(result)
 
@@ -54,3 +55,5 @@ website = urllib.request.Request('http://140.112.27.24:5566/page')
 data = urllib.request.urlopen(website)
 result = data.read()
 print(result)
+
+#import 只需要做一次就行了。
