@@ -61,23 +61,23 @@ def main():
     N =11111
     print("二進位數字{0}的十進位表示法為：{1}".format(N,bin2int(N)))
 
-def bin2int(N): 
+def bin2int(N):
 
-    L = int(len(str(N))) 
-    A = 0                 
+    L = int(len(str(N)))
+    A = 0
     K = 0
-    while L > K :         
-        r = int(N%10)    
-        A = A + (2**K)*r  
-        N = N/10          
-        K = K + 1         
-        
-    str(A)                
+    while L > K :
+        r = int(N%10)
+        A = A + (2**K)*r
+        N = N/10
+        K = K + 1
+
+    str(A)
     return A
 
 if __name__ == '__main__':
-      main()
-        
+      main() #Python 的縮排是 4 個空格。
+
 class HW02:
     def ch2(self):
         '''
@@ -95,10 +95,10 @@ class HW02:
         self.Ch2P2_19d = "8"
 
         #作業 3. 課本 Ch2. P2.20
-        self.Ch2P2_20a = "14" 
-        self.Ch2P2_20b = "8" 
-        self.Ch2P2_20c = "13" 
-        self.Ch2P2_20d = "4" 
+        self.Ch2P2_20a = "14"
+        self.Ch2P2_20b = "8"
+        self.Ch2P2_20c = "13"
+        self.Ch2P2_20d = "4"
 
         #作業 4. 課本 Ch2. P2.22
         self.Ch2P2_22a = "00010001 11101010 00100010 00001110"
