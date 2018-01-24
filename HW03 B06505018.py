@@ -26,8 +26,6 @@ def charFreqLister(inputSTR):
     return resultLIST
 
 
-
-
 # 3.1 加分題 (有做有加分，沒做不扣分)：請用課堂中提到的「霍夫曼編碼]
 #     (https://zh.wikipedia.org/wiki/霍夫曼編碼) 為你之前設計的
 #     程式加上轉碼壓縮的功能。
