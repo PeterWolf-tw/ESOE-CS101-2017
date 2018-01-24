@@ -49,25 +49,25 @@ ans =  " "
         ans = ans +  str (j)
 print ( " {0}的二進位表示為{1} . " .format(N, ans))
     return  None
-
+#縮排錯誤
 
 #作業1.
 #請參考上例，自己寫一個將二進位表示數轉為十進位制的函式供稍後的作業使用：
 def bin2int(N):
-    
-    L = int(len(str(N)))  
-    A = 0                 
+
+    L = int(len(str(N)))
+    A = 0
     K = 0
-    while L > K :         
-        r = int(N%10)     
-        A = A + (2**K)*r  
-        N = N/10          
-        K = K + 1         
-    
-    str(A)                
+    while L > K :
+        r = int(N%10)
+        A = A + (2**K)*r
+        N = N/10
+        K = K + 1
+
+    str(A)
     return A
 class  HW02 :
-     
+
             請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
             Ch2P2_19a = "xxx"
             意思是
@@ -92,8 +92,8 @@ class  HW02 :
        self.Ch2P2_22b = "00001110 00111000 11101010 00111000"
        self.Ch2P2_22c = "01101110 00001110 00111000 01001110"
        self.Ch2P2_22d = "00011000 00111000 00001101 00001011"
-    
-    
+
+
     def  ch3 ( self ):
         '''
             請將你計算出來的答案填入以下變數，助教會寫程式自動批改。
