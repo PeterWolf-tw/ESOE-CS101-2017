@@ -8,19 +8,21 @@ def bin2int(N):
     X = int(len(str(N)))
     A = 0
     K = 0
-    
+
     while X > K :
         R = int(N%10)
         A = A + (2**K)*R
         N = N / 10
         K = K + 1
-        
+
     print("the answer is "+ str(A))
-    
+
 
 if __name__ == '__main__':
     N = 0
     bin2int(N)
+#程式進入點請放在程式碼的最下方。
+
 class HW02:
     def ch2(self):
         '''
